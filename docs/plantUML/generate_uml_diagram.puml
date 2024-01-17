@@ -1,0 +1,59 @@
+@startuml
+title generate_uml_diagram
+
+class os {
+    + getenv()
+}
+
+class subprocess {
+    + mkdtemp()
+}
+
+class tempfile {
+    + mkdtemp()
+}
+
+class shutil {
+    + rmtree()
+}
+
+class openai {
+    + api_key
+}
+
+class logging {
+    + getLogger()
+    + error()
+    + info()
+}
+
+class handlers {
+    + RotatingFileHandler()
+}
+
+class generate_uml_diagram {
+    + openai_generate_uml_diagram()
+}
+
+class save_uml_diagram {
+    + openai_save_uml_diagram()
+}
+
+class clone_repo {
+    + clone_repo()
+}
+
+class retrieve_code {
+    + retrieve_code()
+}
+
+os --> subprocess : Uses
+subprocess --> tempfile : Uses
+tempfile --> shutil : Uses
+openai --> os : Uses
+logging --> handlers : Uses
+openai --> generate_uml_diagram : Uses
+openai --> save_uml_diagram : Uses
+retrieve_code --> clone_repo : Uses
+
+@enduml

@@ -11,11 +11,13 @@ def clone_repo(repo_url, temp_dir, access_token):
         raise ValueError(f"Failed to clone repository: {str(e)}")
 
 
-def retrieve_code(repo, commit_hash_or_branch):
+def retrieve_code(repo, branch_name):
     try:
-        # Assuming you want to retrieve code from a specific commit or branch
-        repo.git.checkout(commit_hash_or_branch)
+        print(f"Attempting to checkout branch: {branch_name}")  # Diagnostic print statement
+        repo.git.fetch()  # Fetch the latest updates from the remote
+        repo.git.checkout(branch_name)
         code = repo.git.show("--pretty=format:", "--name-only")
         return code
     except Exception as e:
         raise ValueError(f"Failed to retrieve code: {str(e)}")
+

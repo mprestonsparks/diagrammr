@@ -94,3 +94,137 @@
   "error": "Failed to retrieve code: Cmd('git') failed due to: exit code(1)\n  cmdline: git checkout main\n  stderr: 'error: pathspec 'main' did not match any file(s) known to git'"
 }
 
+2024-01-16 23:23:18,013 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 23:23:18,013 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 23:23:18,018 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 23:23:20,287 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 186
+2024-01-16 23:23:20,288 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 23:23:20,288 - INFO - Status Code: 500
+2024-01-16 23:23:20,288 - INFO - Response Text: {
+  "error": "Failed to retrieve code: Cmd('git') failed due to: exit code(1)\n  cmdline: git checkout main\n  stderr: 'error: pathspec 'main' did not match any file(s) known to git'"
+}
+
+2024-01-16 23:25:44,325 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 23:25:44,325 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 23:25:44,329 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 23:25:46,614 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 186
+2024-01-16 23:25:46,615 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 23:25:46,615 - INFO - Status Code: 500
+2024-01-16 23:25:46,615 - INFO - Response Text: {
+  "error": "Failed to retrieve code: Cmd('git') failed due to: exit code(1)\n  cmdline: git checkout main\n  stderr: 'error: pathspec 'main' did not match any file(s) known to git'"
+}
+
+2024-01-16 23:28:10,544 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 23:28:10,544 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 23:28:10,549 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 23:28:13,779 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 85
+2024-01-16 23:28:13,779 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 23:28:13,779 - INFO - Status Code: 500
+2024-01-16 23:28:13,779 - INFO - Response Text: {
+  "error": "generate_uml_content() takes 1 positional argument but 2 were given"
+}
+
+2024-01-16 23:31:30,873 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 23:31:30,873 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 23:31:30,877 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 23:31:38,007 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 63
+2024-01-16 23:31:38,007 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 23:31:38,007 - INFO - Status Code: 500
+2024-01-16 23:31:38,008 - INFO - Response Text: {
+  "error": "module 'openai' has no attribute 'Completion'"
+}
+
+2024-01-16 23:33:18,400 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 23:33:18,400 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 23:33:18,404 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 23:33:25,854 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 63
+2024-01-16 23:33:25,854 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 23:33:25,854 - INFO - Status Code: 500
+2024-01-16 23:33:25,854 - INFO - Response Text: {
+  "error": "module 'openai' has no attribute 'Completion'"
+}
+
+2024-01-16 23:36:31,497 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 23:36:31,497 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 23:36:31,501 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 23:36:31,502 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 403 0
+2024-01-16 23:36:31,502 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 23:36:31,502 - INFO - Status Code: 403
+2024-01-16 23:36:31,502 - INFO - Response Text: 
+2024-01-16 23:49:08,679 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 23:49:08,679 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 23:49:08,683 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 23:49:12,243 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 489
+2024-01-16 23:49:12,244 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 23:49:12,244 - INFO - Status Code: 500
+2024-01-16 23:49:12,244 - INFO - Response Text: {
+  "error": "\n\nYou tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n"
+}
+
+2024-01-17 00:09:26,057 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-17 00:09:26,058 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-17 00:09:26,063 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-17 00:09:28,697 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 85
+2024-01-17 00:09:28,697 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-17 00:09:28,697 - INFO - Status Code: 500
+2024-01-17 00:09:28,697 - INFO - Response Text: {
+  "error": "generate_uml_diagram() takes 1 positional argument but 2 were given"
+}
+
+2024-01-17 00:12:05,305 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-17 00:12:05,305 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-17 00:12:05,309 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-17 00:12:07,674 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 85
+2024-01-17 00:12:07,674 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-17 00:12:07,674 - INFO - Status Code: 500
+2024-01-17 00:12:07,674 - INFO - Response Text: {
+  "error": "generate_uml_diagram() takes 1 positional argument but 2 were given"
+}
+
+2024-01-17 00:12:57,687 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-17 00:12:57,687 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-17 00:12:57,691 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-17 00:12:57,692 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 403 0
+2024-01-17 00:12:57,692 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-17 00:12:57,692 - INFO - Status Code: 403
+2024-01-17 00:12:57,692 - INFO - Response Text: 

@@ -1,0 +1,31 @@
+@startuml
+title main.py
+
+class Repo {
+    + clone_from()
+}
+
+class os {
+    + walk()
+}
+
+class clone_repository {
+    + clone_repository()
+}
+
+class explore_files_in_directory {
+    + explore_files_in_directory()
+}
+
+class read_file_content {
+    + read_file_content()
+}
+
+Repo --> clone_repository : Uses
+os --> explore_files_in_directory : Uses
+os --> read_file_content : Uses
+clone_repository --> Repo : Calls
+explore_files_in_directory --> os : Calls
+read_file_content --> os : Calls
+
+@enduml

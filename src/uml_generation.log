@@ -76,3 +76,147 @@
 2024-01-16 23:21:50,178 - INFO -  * Restarting with stat
 2024-01-16 23:21:50,302 - WARNING -  * Debugger is active!
 2024-01-16 23:21:50,307 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 23:23:18,019 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 23:23:18,019 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 23:23:18,019 - INFO - Received outputDirectory: ./output
+2024-01-16 23:23:18,019 - INFO - Received gitHubAccessToken: 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
+2024-01-16 23:23:18,021 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-16 23:23:18,022 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp2wm8_d_o'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-16 23:23:20,279 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp2wm8_d_o'])'s unused stdout: 
+2024-01-16 23:23:20,281 - DEBUG - Popen(['git', 'checkout', 'main'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp2wm8_d_o, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:23:20,286 - ERROR - Error: Failed to retrieve code: Cmd('git') failed due to: exit code(1)
+  cmdline: git checkout main
+  stderr: 'error: pathspec 'main' did not match any file(s) known to git'
+2024-01-16 23:23:20,287 - INFO - 127.0.0.1 - - [16/Jan/2024 23:23:20] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 23:25:42,548 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/retrieve_code.py', reloading
+2024-01-16 23:25:42,573 - INFO -  * Restarting with stat
+2024-01-16 23:25:42,692 - WARNING -  * Debugger is active!
+2024-01-16 23:25:42,696 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 23:25:44,330 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 23:25:44,330 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 23:25:44,330 - INFO - Received outputDirectory: ./output
+2024-01-16 23:25:44,330 - INFO - Received gitHubAccessToken: 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
+2024-01-16 23:25:44,333 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-16 23:25:44,333 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpev_4b43e'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-16 23:25:46,337 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpev_4b43e'])'s unused stdout: 
+2024-01-16 23:25:46,339 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpev_4b43e, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:25:46,605 - DEBUG - Popen(['git', 'checkout', 'main'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpev_4b43e, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:25:46,613 - ERROR - Error: Failed to retrieve code: Cmd('git') failed due to: exit code(1)
+  cmdline: git checkout main
+  stderr: 'error: pathspec 'main' did not match any file(s) known to git'
+2024-01-16 23:25:46,613 - INFO - 127.0.0.1 - - [16/Jan/2024 23:25:46] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 23:28:06,712 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-16 23:28:06,735 - INFO -  * Restarting with stat
+2024-01-16 23:28:06,845 - WARNING -  * Debugger is active!
+2024-01-16 23:28:06,848 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 23:28:10,550 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 23:28:10,550 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 23:28:10,550 - INFO - Received outputDirectory: ./output
+2024-01-16 23:28:10,550 - INFO - Received gitHubAccessToken: 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
+2024-01-16 23:28:10,552 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-16 23:28:10,553 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmprxck18w_'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-16 23:28:13,431 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmprxck18w_'])'s unused stdout: 
+2024-01-16 23:28:13,432 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmprxck18w_, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:28:13,698 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmprxck18w_, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:28:13,770 - DEBUG - Popen(['git', 'show', '--pretty=format:', '--name-only'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmprxck18w_, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:28:13,777 - ERROR - Error: generate_uml_content() takes 1 positional argument but 2 were given
+2024-01-16 23:28:13,778 - INFO - 127.0.0.1 - - [16/Jan/2024 23:28:13] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 23:31:24,705 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-16 23:31:24,731 - INFO -  * Restarting with stat
+2024-01-16 23:31:24,852 - WARNING -  * Debugger is active!
+2024-01-16 23:31:24,855 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 23:31:30,878 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 23:31:30,879 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 23:31:30,879 - INFO - Received outputDirectory: ./output
+2024-01-16 23:31:30,879 - INFO - Received gitHubAccessToken: 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
+2024-01-16 23:31:30,881 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-16 23:31:30,881 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgr681ucl'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-16 23:31:37,363 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgr681ucl'])'s unused stdout: 
+2024-01-16 23:31:37,365 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgr681ucl, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:31:37,938 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgr681ucl, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:31:37,999 - DEBUG - Popen(['git', 'show', '--pretty=format:', '--name-only'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgr681ucl, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:31:38,006 - INFO - Calling OpenAI API to generate UML diagram
+2024-01-16 23:31:38,006 - ERROR - Error: module 'openai' has no attribute 'Completion'
+2024-01-16 23:31:38,007 - INFO - 127.0.0.1 - - [16/Jan/2024 23:31:38] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 23:33:18,405 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 23:33:18,405 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 23:33:18,405 - INFO - Received outputDirectory: ./output
+2024-01-16 23:33:18,405 - INFO - Received gitHubAccessToken: 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
+2024-01-16 23:33:18,406 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpoqe6hk57'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-16 23:33:25,440 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpoqe6hk57'])'s unused stdout: 
+2024-01-16 23:33:25,442 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpoqe6hk57, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:33:25,773 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpoqe6hk57, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:33:25,846 - DEBUG - Popen(['git', 'show', '--pretty=format:', '--name-only'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpoqe6hk57, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:33:25,853 - INFO - Calling OpenAI API to generate UML diagram
+2024-01-16 23:33:25,853 - ERROR - Error: module 'openai' has no attribute 'Completion'
+2024-01-16 23:33:25,853 - INFO - 127.0.0.1 - - [16/Jan/2024 23:33:25] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 23:35:33,317 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/openai_api.py', reloading
+2024-01-16 23:35:33,342 - INFO -  * Restarting with stat
+2024-01-16 23:49:04,880 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-16 23:49:04,880 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-16 23:49:04,880 - INFO -  * Restarting with stat
+2024-01-16 23:49:05,130 - WARNING -  * Debugger is active!
+2024-01-16 23:49:05,135 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 23:49:08,684 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 23:49:08,684 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 23:49:08,684 - INFO - Received outputDirectory: ./output
+2024-01-16 23:49:08,684 - INFO - Received gitHubAccessToken: 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
+2024-01-16 23:49:08,687 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-16 23:49:08,688 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbmkx_8in'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-16 23:49:11,876 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbmkx_8in'])'s unused stdout: 
+2024-01-16 23:49:11,877 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbmkx_8in, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:49:12,159 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbmkx_8in, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:49:12,234 - DEBUG - Popen(['git', 'show', '--pretty=format:', '--name-only'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbmkx_8in, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:49:12,242 - INFO - Calling OpenAI API to generate UML diagram
+2024-01-16 23:49:12,242 - ERROR - Error: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-01-16 23:49:12,242 - INFO - 127.0.0.1 - - [16/Jan/2024 23:49:12] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-17 00:08:42,001 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/openai_api.py', reloading
+2024-01-17 00:08:42,078 - INFO -  * Restarting with stat
+2024-01-17 00:08:42,503 - WARNING -  * Debugger is active!
+2024-01-17 00:08:42,509 - INFO -  * Debugger PIN: 139-904-016
+2024-01-17 00:09:19,091 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/openai_api.py', reloading
+2024-01-17 00:09:19,152 - INFO -  * Restarting with stat
+2024-01-17 00:09:19,427 - WARNING -  * Debugger is active!
+2024-01-17 00:09:19,432 - INFO -  * Debugger PIN: 139-904-016
+2024-01-17 00:09:26,064 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-17 00:09:26,064 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-17 00:09:26,064 - INFO - Received outputDirectory: ./output
+2024-01-17 00:09:26,064 - INFO - Received gitHubAccessToken: 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
+2024-01-17 00:09:26,067 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-17 00:09:26,067 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpt5c4p8wz'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-17 00:09:28,250 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpt5c4p8wz'])'s unused stdout: 
+2024-01-17 00:09:28,252 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpt5c4p8wz, stdin=None, shell=False, universal_newlines=False)
+2024-01-17 00:09:28,617 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpt5c4p8wz, stdin=None, shell=False, universal_newlines=False)
+2024-01-17 00:09:28,688 - DEBUG - Popen(['git', 'show', '--pretty=format:', '--name-only'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpt5c4p8wz, stdin=None, shell=False, universal_newlines=False)
+2024-01-17 00:09:28,696 - INFO - Calling OpenAI API to generate UML diagram
+2024-01-17 00:09:28,696 - ERROR - Error: generate_uml_diagram() takes 1 positional argument but 2 were given
+2024-01-17 00:09:28,696 - INFO - 127.0.0.1 - - [17/Jan/2024 00:09:28] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-17 00:12:03,189 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/openai_api.py', reloading
+2024-01-17 00:12:03,238 - INFO -  * Restarting with stat
+2024-01-17 00:12:03,510 - WARNING -  * Debugger is active!
+2024-01-17 00:12:03,514 - INFO -  * Debugger PIN: 139-904-016
+2024-01-17 00:12:05,310 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-17 00:12:05,311 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-17 00:12:05,311 - INFO - Received outputDirectory: ./output
+2024-01-17 00:12:05,311 - INFO - Received gitHubAccessToken: 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
+2024-01-17 00:12:05,313 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-17 00:12:05,314 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp0t6v60gm'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-17 00:12:07,239 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp0t6v60gm'])'s unused stdout: 
+2024-01-17 00:12:07,240 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp0t6v60gm, stdin=None, shell=False, universal_newlines=False)
+2024-01-17 00:12:07,595 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp0t6v60gm, stdin=None, shell=False, universal_newlines=False)
+2024-01-17 00:12:07,665 - DEBUG - Popen(['git', 'show', '--pretty=format:', '--name-only'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp0t6v60gm, stdin=None, shell=False, universal_newlines=False)
+2024-01-17 00:12:07,672 - INFO - Calling OpenAI API to generate UML diagram
+2024-01-17 00:12:07,673 - ERROR - Error: generate_uml_diagram() takes 1 positional argument but 2 were given
+2024-01-17 00:12:07,673 - INFO - 127.0.0.1 - - [17/Jan/2024 00:12:07] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-17 00:12:56,284 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/openai_api.py', reloading
+2024-01-17 00:12:56,346 - INFO -  * Restarting with stat

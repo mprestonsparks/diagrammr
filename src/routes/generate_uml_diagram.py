@@ -5,7 +5,7 @@ import shutil
 import openai
 import logging
 from logging import handlers  # Import the handlers module
-from openai import generate_uml_diagram as openai_generate_uml_diagram, save_uml_diagram as openai_save_uml_diagram
+from openai_api import generate_uml_diagram as openai_generate_uml_diagram, save_uml_diagram as openai_save_uml_diagram
 from routes.retrieve_code import clone_repo, retrieve_code
 
 # Configure logging to write to a file

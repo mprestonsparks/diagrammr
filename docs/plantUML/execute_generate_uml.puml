@@ -1,0 +1,51 @@
+@startuml
+title execute_generate_uml.py and config.json
+
+class os {
+    + getenv()
+}
+
+class requests {
+    + post()
+}
+
+class tempfile {
+    + mkdtemp()
+}
+
+class logging {
+    + basicConfig()
+    + info()
+    + error()
+}
+
+class load_dotenv {
+    + Load environment variables from .env file
+}
+
+class json {
+    + load()
+    + dumps()
+}
+
+class current_dir {
+    + os.path.dirname()
+    + os.path.abspath()
+}
+
+os --> load_dotenv : Uses
+current_dir --> os : Uses
+tempfile --> os : Uses
+requests --> os : Uses
+json --> os : Uses
+json --> requests : Uses
+logging --> os : Uses
+load_dotenv --> os : Uses
+
+note right of current_dir
+  Read from config.json:
+  - "gitRepoUrl"
+  - "outputDirectory"
+end note
+
+@enduml

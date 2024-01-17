@@ -39,8 +39,8 @@ def generate_uml():
     try:
         temp_dir = tempfile.mkdtemp()
         repo = clone_repo(git_repo_url, temp_dir, github_access_token)
-        code = retrieve_code(repo, "main")  # Replace with your desired commit or branch
-        uml_file_path = generate_uml_content(code, output_directory)
+        code = retrieve_code(repo, "master")  # Replace with your desired commit or branch
+        uml_file_path = generate_uml_content(code)
 
         return jsonify({
             "message": "UML diagrams generated successfully",
