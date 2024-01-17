@@ -1,0 +1,50 @@
+2024-01-16 22:32:23,795 - WARNING -  * Debugger is active!
+2024-01-16 22:32:23,798 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 22:32:24,915 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': '', 'gitHubAccessToken': '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'}
+2024-01-16 22:32:24,915 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:32:24,915 - INFO - Received outputDirectory: 
+2024-01-16 22:32:24,915 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:32:24,915 - INFO - 127.0.0.1 - - [16/Jan/2024 22:32:24] "[31m[1mPOST /generate-uml HTTP/1.1[0m" 400 -
+2024-01-16 22:34:19,296 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 22:34:19,296 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:34:19,296 - INFO - Received outputDirectory: ./output
+2024-01-16 22:34:19,296 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:34:19,296 - ERROR - Error: name 'tempfile' is not defined
+2024-01-16 22:34:19,297 - INFO - 127.0.0.1 - - [16/Jan/2024 22:34:19] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 22:35:21,741 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/execute_generate_uml.py', reloading
+2024-01-16 22:35:21,883 - WARNING -  * Debugger is active!
+2024-01-16 22:35:21,887 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 22:35:30,028 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 22:35:30,028 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:35:30,028 - INFO - Received outputDirectory: ./output
+2024-01-16 22:35:30,028 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:35:30,028 - ERROR - Error: name 'tempfile' is not defined
+2024-01-16 22:35:30,028 - INFO - 127.0.0.1 - - [16/Jan/2024 22:35:30] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 22:36:36,589 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 22:36:36,589 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:36:36,589 - INFO - Received outputDirectory: ./output
+2024-01-16 22:36:36,589 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:36:36,589 - ERROR - Error: name 'tempfile' is not defined
+2024-01-16 22:36:36,589 - INFO - 127.0.0.1 - - [16/Jan/2024 22:36:36] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 22:39:26,589 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-16 22:39:26,731 - WARNING -  * Debugger is active!
+2024-01-16 22:39:26,734 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 22:39:30,253 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 22:39:30,253 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:39:30,253 - INFO - Received outputDirectory: ./output
+2024-01-16 22:39:30,253 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:39:30,254 - ERROR - Error: name 'clone_repo' is not defined
+2024-01-16 22:39:30,254 - INFO - 127.0.0.1 - - [16/Jan/2024 22:39:30] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 22:40:25,692 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/execute_generate_uml.py', reloading
+2024-01-16 22:40:25,828 - WARNING -  * Debugger is active!
+2024-01-16 22:40:25,831 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 22:40:42,249 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/execute_generate_uml.py', reloading
+2024-01-16 22:40:42,389 - WARNING -  * Debugger is active!
+2024-01-16 22:40:42,392 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 22:42:17,427 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 22:42:17,427 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:42:17,427 - INFO - Received outputDirectory: ./output
+2024-01-16 22:42:17,427 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:42:17,428 - ERROR - Error: name 'clone_repo' is not defined
+2024-01-16 22:42:17,428 - INFO - 127.0.0.1 - - [16/Jan/2024 22:42:17] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 22:43:04,298 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/retrieve_code.py', reloading

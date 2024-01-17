@@ -1,0 +1,36 @@
+2024-01-16 22:46:40,820 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 22:46:40,820 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 22:46:40,824 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 22:46:40,825 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 403 0
+2024-01-16 22:46:40,826 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 22:46:40,826 - INFO - Status Code: 403
+2024-01-16 22:46:40,826 - INFO - Response Text: 
+2024-01-16 22:49:10,703 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 22:49:10,703 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 22:49:10,708 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 22:49:10,709 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 403 0
+2024-01-16 22:49:10,709 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 22:49:10,709 - INFO - Status Code: 403
+2024-01-16 22:49:10,709 - INFO - Response Text: 
+2024-01-16 22:59:57,086 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 22:59:57,086 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 22:59:57,090 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 22:59:57,092 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 50
+2024-01-16 22:59:57,092 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 22:59:57,092 - INFO - Status Code: 500
+2024-01-16 22:59:57,092 - INFO - Response Text: {
+  "error": "name 'clone_repo' is not defined"
+}
+

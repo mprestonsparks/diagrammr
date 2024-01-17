@@ -1,0 +1,78 @@
+2024-01-16 22:50:36,586 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-16 22:50:36,586 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-16 22:50:36,586 - INFO -  * Restarting with stat
+2024-01-16 22:50:36,693 - WARNING -  * Debugger is active!
+2024-01-16 22:50:36,696 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 22:51:14,444 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 22:51:14,444 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:51:14,444 - INFO - Received outputDirectory: ./output
+2024-01-16 22:51:14,444 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:51:14,445 - ERROR - Error: name 'clone_repo' is not defined
+2024-01-16 22:51:14,445 - INFO - 127.0.0.1 - - [16/Jan/2024 22:51:14] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 22:52:51,110 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 22:52:51,110 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:52:51,110 - INFO - Received outputDirectory: ./output
+2024-01-16 22:52:51,110 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:52:51,111 - ERROR - Error: name 'clone_repo' is not defined
+2024-01-16 22:52:51,111 - INFO - 127.0.0.1 - - [16/Jan/2024 22:52:51] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 22:53:31,219 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/generate_uml_diagram.py', reloading
+2024-01-16 22:53:31,244 - INFO -  * Restarting with stat
+2024-01-16 22:59:23,911 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-16 22:59:23,911 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-16 22:59:23,911 - INFO -  * Restarting with stat
+2024-01-16 22:59:24,019 - WARNING -  * Debugger is active!
+2024-01-16 22:59:24,023 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 22:59:34,570 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 22:59:34,570 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:59:34,570 - INFO - Received outputDirectory: ./output
+2024-01-16 22:59:34,570 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:59:34,571 - ERROR - Error: name 'clone_repo' is not defined
+2024-01-16 22:59:34,572 - INFO - 127.0.0.1 - - [16/Jan/2024 22:59:34] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 22:59:57,091 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 22:59:57,091 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 22:59:57,091 - INFO - Received outputDirectory: ./output
+2024-01-16 22:59:57,091 - INFO - Received gitHubAccessToken: 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
+2024-01-16 22:59:57,092 - ERROR - Error: name 'clone_repo' is not defined
+2024-01-16 22:59:57,092 - INFO - 127.0.0.1 - - [16/Jan/2024 22:59:57] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 23:04:38,261 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-16 23:04:38,288 - INFO -  * Restarting with stat
+2024-01-16 23:16:07,401 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-16 23:16:07,401 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-16 23:16:07,402 - INFO -  * Restarting with stat
+2024-01-16 23:16:07,509 - WARNING -  * Debugger is active!
+2024-01-16 23:16:07,512 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 23:17:54,937 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 23:17:54,937 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 23:17:54,937 - INFO - Received outputDirectory: ./output
+2024-01-16 23:17:54,937 - INFO - Received gitHubAccessToken: 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
+2024-01-16 23:17:54,939 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-16 23:17:54,940 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp5fxu1igd'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-16 23:17:55,298 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp5fxu1igd'])'s unused stdout: 
+2024-01-16 23:17:55,301 - DEBUG - Popen(['git', 'checkout', 'main'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp5fxu1igd, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:17:55,310 - ERROR - Error: Failed to retrieve code: Cmd('git') failed due to: exit code(1)
+  cmdline: git checkout main
+  stderr: 'error: pathspec 'main' did not match any file(s) known to git'
+2024-01-16 23:17:55,310 - INFO - 127.0.0.1 - - [16/Jan/2024 23:17:55] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 23:19:39,546 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/generate_uml_diagram.py', reloading
+2024-01-16 23:19:39,578 - INFO -  * Restarting with stat
+2024-01-16 23:19:39,692 - WARNING -  * Debugger is active!
+2024-01-16 23:19:39,696 - INFO -  * Debugger PIN: 139-904-016
+2024-01-16 23:19:43,998 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'outputDirectory': './output', 'gitHubAccessToken': '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'}
+2024-01-16 23:19:43,998 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-16 23:19:43,998 - INFO - Received outputDirectory: ./output
+2024-01-16 23:19:43,998 - INFO - Received gitHubAccessToken: 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
+2024-01-16 23:19:44,000 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-16 23:19:44,001 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgibwxqnn'], cwd=/Users/preston/Documents/gitRepos/diagrammr/src, stdin=None, shell=False, universal_newlines=True)
+2024-01-16 23:19:44,411 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgibwxqnn'])'s unused stdout: 
+2024-01-16 23:19:44,415 - DEBUG - Popen(['git', 'checkout', 'main'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgibwxqnn, stdin=None, shell=False, universal_newlines=False)
+2024-01-16 23:19:44,423 - ERROR - Error: Failed to retrieve code: Cmd('git') failed due to: exit code(1)
+  cmdline: git checkout main
+  stderr: 'error: pathspec 'main' did not match any file(s) known to git'
+2024-01-16 23:19:44,424 - INFO - 127.0.0.1 - - [16/Jan/2024 23:19:44] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-16 23:21:50,148 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/generate_uml_diagram.py', reloading
+2024-01-16 23:21:50,178 - INFO -  * Restarting with stat
+2024-01-16 23:21:50,302 - WARNING -  * Debugger is active!
+2024-01-16 23:21:50,307 - INFO -  * Debugger PIN: 139-904-016

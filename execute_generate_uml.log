@@ -1,0 +1,96 @@
+2024-01-16 22:30:31,675 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 22:30:31,676 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 22:30:31,680 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 22:30:31,681 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 400 45
+2024-01-16 22:30:31,681 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 22:30:31,681 - INFO - Status Code: 400
+2024-01-16 22:30:31,682 - INFO - Response Text: {
+  "error": "Missing required parameters"
+}
+
+2024-01-16 22:32:24,910 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 22:32:24,910 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 22:32:24,914 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 22:32:24,916 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 400 45
+2024-01-16 22:32:24,916 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 22:32:24,916 - INFO - Status Code: 400
+2024-01-16 22:32:24,916 - INFO - Response Text: {
+  "error": "Missing required parameters"
+}
+
+2024-01-16 22:34:19,291 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 22:34:19,291 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 22:34:19,295 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 22:34:19,297 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 48
+2024-01-16 22:34:19,297 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 22:34:19,297 - INFO - Status Code: 500
+2024-01-16 22:34:19,297 - INFO - Response Text: {
+  "error": "name 'tempfile' is not defined"
+}
+
+2024-01-16 22:35:30,023 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 22:35:30,023 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 22:35:30,027 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 22:35:30,029 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 48
+2024-01-16 22:35:30,029 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 22:35:30,029 - INFO - Status Code: 500
+2024-01-16 22:35:30,029 - INFO - Response Text: {
+  "error": "name 'tempfile' is not defined"
+}
+
+
+2024-01-16 22:56:39,088 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 22:56:39,088 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 22:56:39,093 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 22:56:39,094 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 403 0
+2024-01-16 22:56:39,094 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 22:56:39,094 - INFO - Status Code: 403
+2024-01-16 22:56:39,094 - INFO - Response Text: 
+2024-01-16 23:17:54,931 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 23:17:54,931 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 23:17:54,935 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 23:17:55,311 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 186
+2024-01-16 23:17:55,311 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 23:17:55,311 - INFO - Status Code: 500
+2024-01-16 23:17:55,311 - INFO - Response Text: {
+  "error": "Failed to retrieve code: Cmd('git') failed due to: exit code(1)\n  cmdline: git checkout main\n  stderr: 'error: pathspec 'main' did not match any file(s) known to git'"
+}
+
+2024-01-16 23:19:43,992 - INFO - Sending JSON data to http://127.0.0.1:5000/generate-uml:
+2024-01-16 23:19:43,992 - INFO - {
+  "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
+  "outputDirectory": "./output",
+  "gitHubAccessToken": "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"
+}
+2024-01-16 23:19:43,997 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-01-16 23:19:44,424 - DEBUG - http://127.0.0.1:5000 "POST /generate-uml HTTP/1.1" 500 186
+2024-01-16 23:19:44,425 - INFO - Response from server (http://127.0.0.1:5000/generate-uml):
+2024-01-16 23:19:44,425 - INFO - Status Code: 500
+2024-01-16 23:19:44,425 - INFO - Response Text: {
+  "error": "Failed to retrieve code: Cmd('git') failed due to: exit code(1)\n  cmdline: git checkout main\n  stderr: 'error: pathspec 'main' did not match any file(s) known to git'"
+}
+
