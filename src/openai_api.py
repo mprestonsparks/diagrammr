@@ -58,11 +58,12 @@ class OpenAIAPI:
 
         return uml_code
     
-    
+
     def save_uml_diagram(self, uml_code, file_name):
         # Create the full file path
         file_path = os.path.join(self.OUTPUT_DIRECTORY, file_name)
-        
+        print(f'File path: {file_path}')
+
         # Create the directory if it does not exist
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         

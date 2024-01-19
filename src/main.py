@@ -20,6 +20,7 @@ with open('src/scripts/config.json') as config_file:
 
 repo_url = config['gitRepoUrl']
 local_dir = config['local_dir']  # Changed from 'outputDirectory' to 'local_dir'
+print(f'Local directory: {local_dir}')
 
 # Clear out the local_dir before cloning
 if os.path.exists(local_dir):
@@ -58,10 +59,11 @@ def read_file_content(file_path):
 
 # Run execute_generate_uml.py
 try:
-    subprocess.run(["python3", "src/scripts/execute_generate_uml.py"], check=True)
+    result = subprocess.run(["python3", "src/scripts/execute_generate_uml.py"], check=True)
+    if result.returncode == 0:
+        # Now that execute_generate_uml.py has run, the Python files should exist
+        files = explore_files_in_directory(local_dir)
+        print(f'Files: {files}')
+        file_content = read_file_content(files[0])
 except subprocess.CalledProcessError as e:
     logging.error(f'Error occurred while running execute_generate_uml.py: {str(e)}')
-
-# Now that execute_generate_uml.py has run, the Python files should exist
-files = explore_files_in_directory(local_dir)
-file_content = read_file_content(files[0])

@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 import tempfile
 from routes.retrieve_code import clone_repo, retrieve_code
 from routes.generate_uml_diagram import generate_uml_content
+from routes.generate_uml_diagram import process_uml_request
 import logging
 
 # Configure logging to a file
