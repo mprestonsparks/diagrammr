@@ -1,12 +1,17 @@
 import os
 import subprocess
+import json
+import git
 import tempfile
 import shutil
 import openai
 import logging
-from logging import handlers  # Import the handlers module
-from openai_api import generate_uml_diagram as openai_generate_uml_diagram, save_uml_diagram as openai_save_uml_diagram
-from routes.retrieve_code import clone_repo, retrieve_code
+from logging import handlers  
+from openai_api import OpenAIAPI 
+from routes.retrieve_code import retrieve_code
+
+# Create an instance of the OpenAI API
+api = OpenAIAPI()
 
 # Configure logging to write to a file
 log_filename = 'uml_generation.log'
@@ -22,7 +27,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def process_uml_request(data):
     git_repo_url = data.get('gitRepoUrl')
-    output_directory = data.get('outputDirectory')
+    output_directory = "./output"
     github_access_token = data.get('gitHubAccessToken')
     if not git_repo_url or not output_directory or not github_access_token:
         logging.error("Missing required parameters")
@@ -33,19 +38,29 @@ def process_uml_request(data):
 
         # Clone the repository
         logging.info(f"Cloning repository: {git_repo_url}")
-        repo = clone_repo(git_repo_url, temp_dir, github_access_token)
+        repo = git.Repo.clone_from(git_repo_url, temp_dir, github_access_token)
         
-        # Retrieve the code from the repository (specify commit or branch as needed)
-        logging.info("Retrieving code from repository")
-        code = retrieve_code(repo, "master")  # Replace with your desired commit or branch
+        # Load the config
+        with open('config.json', 'r') as f:
+            config = json.load(f)
         
-        # Generate the UML diagram using the OpenAI API
-        logging.info("Generating UML diagram")
-        uml_code = generate_uml_content(code)
+        # Create a new object with the files to include
+        files_to_include = {}
+        for file in repo.tree():
+            if file.path in config['include']:
+                with open(file.abspath, 'r') as f:
+                    files_to_include[file.path] = f.read()
+
+        logging.debug(f"Type of files_to_include: {type(files_to_include)}")  # Debugging statement
+        logging.debug(f"Value of files_to_include: {files_to_include}")  # Debugging statement
+
+        uml_code = generate_uml_content(files_to_include)
 
         # Save the UML diagram to a file
         logging.info(f"Saving UML diagram to {output_directory}")
-        final_output_path = openai_save_uml_diagram(uml_code, output_directory)
+        final_output_path = api.save_uml_diagram(uml_code, output_directory)
+        logging.info(f"UML diagram saved at: {final_output_path}")  # Log the path where the UML diagram was saved
+
 
         return {
             "message": "UML diagrams generated successfully",
@@ -64,12 +79,16 @@ def process_uml_request(data):
         logging.info("Cleaning up temporary directory")
         shutil.rmtree(temp_dir)
 
-def generate_uml_content(code):
-    # Call OpenAI API to generate UML diagram
-    logging.info("Calling OpenAI API to generate UML diagram")
-    uml_code = openai_generate_uml_diagram(code, openai.api_key)
-    # Check if UML diagram was generated successfully
-    if not uml_code or "UML generation failed" in uml_code:
-        logging.error("Failed to generate UML diagram")
-        raise ValueError("Failed to generate UML diagram")
+
+def generate_uml_content(files):
+    uml_code = ""
+    for file_path, code in files.items():
+        # Call OpenAI API to generate UML diagram for each file
+        logging.info(f"Calling OpenAI API to generate UML diagram for {file_path}")
+        uml_code_for_file = api.generate_uml_diagram(code)
+        logging.info(f"Received UML code for {file_path}: {uml_code_for_file}")  # Log the UML code received for each file
+        if not uml_code_for_file or "UML generation failed" in uml_code_for_file:
+            logging.error(f"Failed to generate UML diagram for {file_path}")
+            raise ValueError(f"Failed to generate UML diagram for {file_path}")
+        uml_code += uml_code_for_file
     return uml_code

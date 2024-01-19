@@ -1,0 +1,16 @@
+{
+    "ignore": [
+        "*.log",
+        "*.txt",
+        "*.md",
+        "__init__.py",
+        "__pycache__/", 
+        "config.json", 
+        ".gitignore", 
+        ".env",
+        "docs/", 
+        "venv/",
+        ".git/"
+    ],
+    "include": [".py"]
+}

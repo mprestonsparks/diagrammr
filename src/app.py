@@ -27,13 +27,14 @@ def generate_uml():
     app.logger.info(f"Received JSON data: {data}")
 
     git_repo_url = data.get('gitRepoUrl')
-    output_directory = data.get('outputDirectory')
+    local_dir = "./output"  # Changed from 'outputDirectory' to 'local_dir'
     github_access_token = data.get('gitHubAccessToken')
     app.logger.info(f"Received gitRepoUrl: {git_repo_url}")
-    app.logger.info(f"Received outputDirectory: {output_directory}")
+    app.logger.info(f"Received local_dir: {local_dir}")  # Changed from 'outputDirectory' to 'local_dir'
     app.logger.info(f"Received gitHubAccessToken: {github_access_token}")
 
-    if not git_repo_url or not output_directory or not github_access_token:
+
+    if not git_repo_url or not local_dir or not github_access_token:
         return jsonify({"error": "Missing required parameters"}), 400
 
     try:

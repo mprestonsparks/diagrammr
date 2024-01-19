@@ -1,4 +1,4 @@
 {
     "gitRepoUrl": "https://github.com/mprestonsparks/diagrammr.git",
-    "outputDirectory": "./output"
+    "local_dir": "./output"
 }
