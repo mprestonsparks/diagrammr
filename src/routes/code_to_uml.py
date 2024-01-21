@@ -20,12 +20,15 @@ logger = logging.getLogger()
 logger.addHandler(log_handler)
 logger.setLevel(logging.DEBUG)
 
-# code_to_uml.py
 def generate_content(files, output_directory):
     logging.info(f"Files to process: {files}")  # Log the files dictionary
     generated_code = ""  # Initialize generated_code
     file_paths = []  # Initialize a list to store the file paths
     for file_path, code in files.items():
+        # Skip if the file is empty
+        if not code.strip():
+            logging.info(f"Skipping empty file: {file_path}")
+            continue
         logging.info(f"Processing file: {file_path}")
         generated_code_for_file = api.generate_from_code(code)
         logging.info(f"UML code generated for {file_path}: {generated_code_for_file}")  # Log the generated UML code

@@ -1,0 +1,61 @@
+@startuml code_to_uml.py
+
+[*] --> code_to_uml.py
+
+class code_to_uml.py {
++ api: OpenAIAPI
++ log_directory: String
++ log_filename: String
++ log_handler: RotatingFileHandler
++ log_formatter: Formatter
++ logger: logging
++ generate_content(): void
++ main(): void
+}
+
+code_to_uml.py --> OpenAIAPI
+code_to_uml.py --> logging
+
+class OpenAIAPI {
++ generate(): String
++ create_diagram(): void
+}
+
+class logging {
++ handlers: handlers
++ formatter: Formatter
+logger: debug
+info
+}
+
+code_to_uml.py --> main.py
+code_to_uml.py --> helper.py
+
+class main.py {
+}
+
+class helper.py {
+}
+
+main.py --> generate_content()
+helper.py --> generate_content()
+
+generate_content() --> logging
+logging --> log_directory
+logging --> log_filename
+logging --> log_handler
+logging --> log_formatter
+logging --> logger
+logger --> logging: debug, info
+logging --> file_paths
+logging --> generated_code
+generate_content() --> api: create_diagram()
+api --> generate()
+generate() --> api: generate()
+generate() --> code
+generate() --> output
+api --> create_diagram()
+create_diagram() --> generated_code
+create_diagram() --> output_directory
+
+@enduml

@@ -1,0 +1,185 @@
+)
+
+        # Generate UML diagrams
+        for diagram in config['diagrams']:
+            plantuml = PlantUML()
+            for file in diagram['files']:
+                plantuml.process_file(file)
+            plantuml.run(output_directory)
+
+Class Diagram:
+@startuml
+class MainController
+Entity thub_access_token
+Entity branch_name
+Entity git_repo_url
+Entity output_directory
+
+MainController -- thub_access_token : has
+MainController -- branch_name : has
+MainController -- git_repo_url : has
+MainController -- output_directory : has
+
+MainController : -logger
+MainController : -temp_dir
+
+note top of MainController
+main controller
+end note
+@enduml
+
+Sequence Diagram:
+@startuml
+hide footbox
+title UML Generation
+
+autonumber
+
+actor User
+boundary Controller
+control MainController
+database Database
+participant TryCatch
+participant config
+participant clone_repo
+participant PlantUML
+
+User -> Controller: Submit request
+activate Controller
+Controller -> MainController: Get parameters
+activate MainController
+MainController -> MainController: Set default branch name
+MainController -> MainController: Check for missing parameters
+deactivate MainController
+alt Parameters missing
+MainController -> TryCatch: Log error
+activate TryCatch
+TryCatch --> Controller: Return error message
+deactivate TryCatch
+else Parameters valid
+MainController -> TryCatch: Create temporary directory
+activate TryCatch
+alt Error creating directory
+TryCatch --> MainController: Return error message
+else Directory created successfully
+TryCatch -> MainController: Clone repository
+activate MainController
+MainController -> Database: Get config file
+activate Database
+alt Config file not found
+Database --> MainController: Return error message
+else Config file found
+Database -> MainController: Load config
+MainController -> MainController: Generate UML diagrams
+MainController -> MainController: Process each file in config
+MainController -> PlantUML: Generate UML for each file
+activate PlantUML
+PlantUML -> output_directory: Save UML diagrams
+plantuml run
+deactivate PlantUML
+MainController --> MainController: Return success message
+end
+deactivate MainController
+@endumlt_from_files(included_files)
+        
+        
+@startuml
+
+class TraverseDirectories {
+    -repo: Repository
+    -temp_dir: String
+    -config: Config
+    +included_files: Map<String, String>
+    +traverse_directories(Repo, String, Config): Map<String, String>
+}
+
+class Repository {
+    +tree(): Tree
+}
+
+class Tree {
+    +traverse(): Iterable<TreeItem>
+}
+
+class TreeItem {
+    -type: String
+    -path: String
+}
+
+class Config {
+    -include: List<String>
+}
+
+class Logger {
+    +debug(message: String): void
+    +info(message: String): void
+}
+
+class GenerateContent {
+    +generate_content_from_files(files: Map<String, String>): List<String>
+}
+
+TraverseDirectories --> Repository
+TraverseDirectories --> Config
+TraverseDirectories --> Logger
+TraverseDirectories --> GenerateContent
+TraverseDirectories o-- Map
+
+Repository --> Tree
+
+Tree --> TreeItem
+
+GenerateContent <-- TraverseDirectories
+
+GenerateContent --> Logger
+GenerateContent o-- Map
+
+Logger <-- TraverseDirectories
+Logger <-- GenerateContent
+
+
+Config <.. TraverseDirectories
+Config <.. GenerateContent
+
+@enduml@enduml
+
+@startuml
+
+class t {
+  - included_files
+  - output_directory
+  + logger
+  + final_output_paths
+  + git_repo_url
+  + temp_dir
+  + e
+  + t(included_files, output_directory)
+  + generate_UML()
+}
+
+t..>logger: uses
+t-->"output_paths": contains
+t-->output_paths: "is a list"
+t-->git_repo_url
+t-->temp_dir: "contains"
+t-->e: "contains"
+t-->generate_UML: "calls"
+output_paths..>"output_directory": in
+git_repo_url-->"Repository": in
+e-->500: "returns"
+t-->500: "returns"
+temp_dir-->"Cleaning up temporary directory": logs
+e-->"Error during UML generation:": logs
+output_paths-->"Log the path where each UML diagram was saved": logs
+
+generate_UML-->"UML diagram saved at": logs
+output_paths..>"Final output paths": in
+t-->t(included_files, output_directory): "calls"
+t-->{json}: returns
+{json}-->"message": in
+{json}-->"details": in
+{json}-->"Repository": in
+{json}-->"Output Paths": in
+{json}-->t: returns
+
+@enduml

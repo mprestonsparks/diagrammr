@@ -1,0 +1,75 @@
+@startuml name
+
+class Config
+    Current_dir : string
+    Config_file_path : string
+    + get_config() : dict
+    + update_config(config) : void
+
+Config --> Current_dir
+Config --> Config_file_path
+Config --o logger
+
+
+class Logger
+    + log_handler : RotatingFileHandler
+    + log_formatter : Formatter
+    + logger : Logger
+    + set_handler(handler) : void
+    + set_formatter(formatter) : void
+    + add_handler(handler) : void
+    + set_level(level) : void
+    + log(msg, level) : void
+
+Logger --o log_handler
+Logger --o log_formatter
+Logger --o logger
+
+
+class UmlGenerator
+    + config : Config
+    + logger : Logger
+    + execute() : void
+    + generate_uml() : void
+    + save_file(content) : void
+
+UmlGenerator --o config
+UmlGenerator --o logger
+
+class RequestManager
+    + api_url : string
+    + config : Config
+    + logger : Logger
+    + get_umls(concepts) : list
+    + process_request(response) : dict
+    + send_request(params) : json
+
+RequestManager --o config
+RequestManager --o logger
+
+class DOTEnv
+    + load_dotenv() : void
+
+DOTEnv --o UmlGenerator
+
+class JsonManager
+    + config_file_path : string
+    + get_data() : dict
+    + update_data(new_data) : void
+
+JsonManager --o Config
+JsonManager --o Config_file_path
+
+class OS
+    + get_current_dir() : string
+
+OS --o Config
+OS --o Current_dir
+
+class Requests
+    + get(url) : json
+
+Requests --o RequestManager
+
+
+@enduml

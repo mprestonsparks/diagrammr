@@ -37,11 +37,6 @@ def generate_uml():
         return jsonify({"error": "Missing required parameters"}), 400
 
     try:
-        temp_dir = tempfile.mkdtemp()
-        repo = clone_repo(git_repo_url, temp_dir, github_access_token)
-        # Log the contents of the cloned repository
-        app.logger.info(f"Contents of the cloned repository: {os.listdir(temp_dir)}")
-
         response = process_request(data)  # Call the process_request function
 
         return jsonify(response), 200

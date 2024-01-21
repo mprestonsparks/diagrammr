@@ -52,20 +52,9 @@ class OpenAIAPI:
                     max_tokens=self.MAX_TOKENS)
                 
                 # Log the response from OpenAI
-                logging.info(f"Received response from OpenAI: {response.data}")  # Log the response from OpenAI
+                logging.info(f"Received response from OpenAI: {response.choices[0].text}")  # Log the response from OpenAI
 
-                # Check if response is a string and try to parse it into a dictionary
-                if isinstance(response, str):
-                    try:
-                        response = json.loads(response)
-                    except json.JSONDecodeError:
-                        logging.error("Failed to parse response into a dictionary")
-                        return "UML generation failed"
-
-                if 'choices' in response:
-                    generated_code += response['choices'][0]['text']  # Append the generated text to the UML code
-                else:
-                    return "UML generation failed"  # Return a message if no choice was found
+                generated_code += response.choices[0].text.strip()  # Append the generated text to the UML code
             except OpenAIError as e:
                 logging.error(f"An error occurred while sending the prompt: {e}")  # Log the error message
                 return f"An error occurred: {e}"  # Return a message if an OpenAI API error occurs
