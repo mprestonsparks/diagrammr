@@ -11,7 +11,7 @@ class UMLGenerator:
         with open(config_file) as file:
             self.config = json.load(file)
 
-    def generate_uml_diagrams(self, file_list):
+    def generate_from_codes(self, file_list):
         uml_contents = []
         for file in file_list:
             if self._should_skip_file(file):
@@ -19,17 +19,17 @@ class UMLGenerator:
             logging.info(f"Generating UML for file: {file}")
             with open(file, 'r') as f:
                 file_content = f.read()
-            uml_content = self.api.generate_uml_diagram(file_content)
+            uml_content = self.api.generate_from_code(file_content)
             if uml_content != "UML generation failed":
                 uml_contents.append(uml_content)
             else:
                 logging.error(f"UML generation failed for file: {file}")
         return uml_contents
 
-    def save_uml_diagrams(self, uml_contents, file_names):
+    def save_generated_outputs(self, uml_contents, file_names):
         for uml_content, file_name in zip(uml_contents, file_names):
             logging.info(f"Saving UML diagram for file: {file_name}")
-            self.api.save_uml_diagram(uml_content, file_name)
+            self.api.save_generated_output(uml_content, file_name)
 
     def _should_skip_file(self, file):
         python_files_only = self.config.get('python_files_only', False)
@@ -39,6 +39,6 @@ class UMLGenerator:
                 (python_files_only and not file.endswith('.py')) or 
                 any(file.endswith(ext) for ext in ignore_extensions))
 
-    def _generate_uml_diagram(self, file):
+    def _generate_from_code(self, file):
         logging.info(f"Generating UML diagram for file: {file}")
-        return self.api.generate_uml_diagram(file)
+        return self.api.generate_from_code(file)

@@ -6,7 +6,7 @@
     |_ output/
     |_ src/
         |_ src/routes/
-            |_ generate_uml_diagram.py
+            |_ generate_from_code.py
         |_ src/scripts/
             |_ execute_generate_uml.py
             |_ config.json

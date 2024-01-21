@@ -1,8 +1,8 @@
+import os
 from flask import Flask, jsonify, request
 import tempfile
 from routes.retrieve_code import clone_repo, retrieve_code
-from routes.generate_uml_diagram import generate_uml_content
-from routes.generate_uml_diagram import process_uml_request
+from routes.uml_from_repo import process_request  # Import the function from uml_from_repo.py
 import logging
 
 # Configure logging to a file
@@ -14,7 +14,6 @@ console.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 console.setFormatter(formatter)
 logging.getLogger('').addHandler(console)
-
 
 app = Flask(__name__)
 
@@ -34,27 +33,21 @@ def generate_uml():
     app.logger.info(f"Received local_dir: {local_dir}")  # Changed from 'outputDirectory' to 'local_dir'
     app.logger.info(f"Received gitHubAccessToken: {github_access_token}")
 
-
     if not git_repo_url or not local_dir or not github_access_token:
         return jsonify({"error": "Missing required parameters"}), 400
 
     try:
         temp_dir = tempfile.mkdtemp()
         repo = clone_repo(git_repo_url, temp_dir, github_access_token)
-        code = retrieve_code(repo, "master")  # Replace with your desired commit or branch
-        uml_file_path = generate_uml_content(code)
+        # Log the contents of the cloned repository
+        app.logger.info(f"Contents of the cloned repository: {os.listdir(temp_dir)}")
 
-        return jsonify({
-            "message": "UML diagrams generated successfully",
-            "details": {
-                "Repository": git_repo_url,
-                "Output Path": uml_file_path
-            }
-        }), 200
+        response = process_request(data)  # Call the process_request function
+
+        return jsonify(response), 200
     except Exception as e:
         app.logger.error(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
-

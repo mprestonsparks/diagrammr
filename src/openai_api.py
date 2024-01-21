@@ -1,11 +1,25 @@
 import json
 import os
 import logging
+from logging import handlers
 from openai import OpenAI, OpenAIError
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
+
+# Configure logging to write to a file
+log_directory = 'logs'
+# Create the directory if it doesn't exist
+os.makedirs(log_directory, exist_ok=True)  
+log_filename = os.path.join(log_directory, 'openai_api.log')
+log_handler = handlers.RotatingFileHandler(log_filename, maxBytes=1024*1024, backupCount=5)  # Log file with rotation
+log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+log_handler.setFormatter(log_formatter)
+logger = logging.getLogger()
+logger.addHandler(log_handler)
+logger.setLevel(logging.DEBUG)
+
 
 class OpenAIAPI:
     def __init__(self):
@@ -23,11 +37,11 @@ class OpenAIAPI:
         self.OUTPUT_DIRECTORY = "src/output"
 
 
-    def generate_uml_diagram(self, code):
+    def generate_from_code(self, code):
         # Split the code into chunks of MAX_TOKENS
         code_chunks = [code[i:i+self.MAX_TOKENS] for i in range(0, len(code), self.MAX_TOKENS)]
 
-        uml_code = ""
+        generated_code = ""
         for chunk in code_chunks:
             prompt_text = f"Create UML diagrams in .puml format for the following code:\n\n{chunk}"
             logging.info(f"Sending prompt to OpenAI: {prompt_text}")  # Log the prompt text
@@ -49,25 +63,24 @@ class OpenAIAPI:
                         return "UML generation failed"
 
                 if 'choices' in response:
-                    uml_code += response['choices'][0]['text']  # Append the generated text to the UML code
+                    generated_code += response['choices'][0]['text']  # Append the generated text to the UML code
                 else:
                     return "UML generation failed"  # Return a message if no choice was found
             except OpenAIError as e:
                 logging.error(f"An error occurred while sending the prompt: {e}")  # Log the error message
                 return f"An error occurred: {e}"  # Return a message if an OpenAI API error occurs
 
-        return uml_code
+        return generated_code
     
 
-    def save_uml_diagram(self, uml_code, file_name):
-        # Create the full file path
-        file_path = os.path.join(self.OUTPUT_DIRECTORY, file_name)
-        print(f'File path: {file_path}')
-
+    def save_generated_output(self, generated_code, file_path):
         # Create the directory if it does not exist
+        logging.info(f"Saving generated output to {file_path}")
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         
         # Write the UML code to the file
         with open(file_path, 'w') as file:
-            file.write(uml_code)
-            logging.info(f"UML diagram saved to {file_path}")  # Optional: print out the path where the file was saved
+            file.write(generated_code)
+            logging.info(f"Generated output saved to {file_path}")  # Optional: print out the path where the file was saved
+
+        return file_path   

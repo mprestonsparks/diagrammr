@@ -1,0 +1,650 @@
+2024-01-20 19:06:23,352 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:06:23,353 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:06:23,362 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 19:06:23,363 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 19:06:23,363 - INFO -  * Restarting with stat
+2024-01-20 19:06:23,623 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:06:23,624 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:06:23,632 - WARNING -  * Debugger is active!
+2024-01-20 19:06:23,639 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:06:39,941 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 19:06:39,941 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:06:39,941 - INFO - Received local_dir: ./output
+2024-01-20 19:06:39,941 - INFO - Received gitHubAccessToken: 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
+2024-01-20 19:06:39,942 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:06:39,944 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 19:06:39,945 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbbekutlj'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:06:44,334 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbbekutlj'])'s unused stdout: 
+2024-01-20 19:06:44,335 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:06:44,335 - INFO - Attempting to checkout branch: master
+2024-01-20 19:06:44,335 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbbekutlj, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 19:06:44,749 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbbekutlj, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 19:06:44,851 - INFO - Successfully checked out branch: master
+2024-01-20 19:06:44,852 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbbekutlj, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:06:44,858 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbbekutlj, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:06:44,863 - INFO - Cleaning up temporary directory
+2024-01-20 19:06:44,863 - INFO - Cloning repository: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:06:44,864 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkqfxvvxf'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:06:49,875 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkqfxvvxf'])'s unused stdout: 
+2024-01-20 19:06:49,877 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkqfxvvxf, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:06:49,884 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkqfxvvxf, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:06:49,890 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 19:06:49,891 - DEBUG - Value of included_files: {}
+2024-01-20 19:06:49,891 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 19:06:49,891 - INFO - Files to process: {}
+2024-01-20 19:06:49,891 - INFO - Generated file paths: []
+2024-01-20 19:06:49,891 - INFO - Final output paths: []
+2024-01-20 19:06:49,891 - INFO - Cleaning up temporary directory
+2024-01-20 19:06:50,049 - INFO - 127.0.0.1 - - [20/Jan/2024 19:06:50] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 19:14:43,342 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:14:43,343 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:14:43,354 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 19:14:43,355 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 19:14:43,355 - INFO -  * Restarting with stat
+2024-01-20 19:14:43,612 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:14:43,613 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:14:43,621 - WARNING -  * Debugger is active!
+2024-01-20 19:14:43,626 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:14:49,817 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 19:14:49,817 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:14:49,817 - INFO - Received local_dir: ./output
+2024-01-20 19:14:49,817 - INFO - Received gitHubAccessToken: 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
+2024-01-20 19:14:49,819 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:14:49,822 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 19:14:49,823 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkyeff0se'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:14:54,258 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkyeff0se'])'s unused stdout: 
+2024-01-20 19:14:54,259 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:14:54,260 - INFO - Attempting to checkout branch: master
+2024-01-20 19:14:54,260 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkyeff0se, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 19:14:54,535 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkyeff0se, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 19:14:54,624 - INFO - Successfully checked out branch: master
+2024-01-20 19:14:54,625 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkyeff0se, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:14:54,630 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpkyeff0se, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:14:54,636 - INFO - Cleaning up temporary directory
+2024-01-20 19:14:54,636 - INFO - Cloning repository: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:14:54,636 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpj9hnqzng'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:15:07,373 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpj9hnqzng'])'s unused stdout: 
+2024-01-20 19:15:07,375 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpj9hnqzng, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:15:07,381 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpj9hnqzng, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:15:07,385 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 19:15:07,385 - DEBUG - Value of included_files: {}
+2024-01-20 19:15:07,385 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 19:15:07,385 - INFO - Files to process: {}
+2024-01-20 19:15:07,386 - INFO - Generated file paths: []
+2024-01-20 19:15:07,386 - INFO - Final output paths: []
+2024-01-20 19:15:07,386 - INFO - Cleaning up temporary directory
+2024-01-20 19:15:07,546 - INFO - 127.0.0.1 - - [20/Jan/2024 19:15:07] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 19:20:39,641 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-20 19:20:39,709 - INFO -  * Restarting with stat
+2024-01-20 19:20:39,993 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:20:39,994 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:20:40,002 - WARNING -  * Debugger is active!
+2024-01-20 19:20:40,006 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:21:44,199 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-20 19:21:44,257 - INFO -  * Restarting with stat
+2024-01-20 19:21:44,522 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:21:44,523 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:21:44,531 - WARNING -  * Debugger is active!
+2024-01-20 19:21:44,536 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:22:04,223 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-20 19:22:04,280 - INFO -  * Restarting with stat
+2024-01-20 19:22:04,563 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:22:04,564 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:22:04,572 - WARNING -  * Debugger is active!
+2024-01-20 19:22:04,578 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:22:20,632 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:22:20,633 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:22:20,642 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 19:22:20,643 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 19:22:20,643 - INFO -  * Restarting with stat
+2024-01-20 19:22:20,899 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:22:20,900 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:22:20,907 - WARNING -  * Debugger is active!
+2024-01-20 19:22:20,912 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:22:27,706 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 19:22:27,706 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:22:27,706 - INFO - Received local_dir: ./output
+2024-01-20 19:22:27,706 - INFO - Received gitHubAccessToken: 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
+2024-01-20 19:22:27,707 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:22:27,709 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 19:22:27,709 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbfhv9_pg'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:22:33,419 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpbfhv9_pg'])'s unused stdout: 
+2024-01-20 19:22:33,420 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:22:33,420 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 19:22:33,421 - INFO - Cleaning up temporary directory
+2024-01-20 19:22:33,421 - INFO - Cloning repository: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:22:33,421 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpnrnlm8d7'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:22:37,997 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpnrnlm8d7'])'s unused stdout: 
+2024-01-20 19:22:37,999 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpnrnlm8d7, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:22:38,005 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpnrnlm8d7, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:22:38,010 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 19:22:38,010 - DEBUG - Value of included_files: {}
+2024-01-20 19:22:38,010 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 19:22:38,010 - INFO - Files to process: {}
+2024-01-20 19:22:38,010 - INFO - Generated file paths: []
+2024-01-20 19:22:38,010 - INFO - Final output paths: []
+2024-01-20 19:22:38,010 - INFO - Cleaning up temporary directory
+2024-01-20 19:22:38,158 - ERROR - Error: name 'code' is not defined
+2024-01-20 19:22:38,158 - INFO - 127.0.0.1 - - [20/Jan/2024 19:22:38] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-20 19:22:50,918 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-20 19:22:50,978 - INFO -  * Restarting with stat
+2024-01-20 19:22:51,265 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:22:51,266 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:22:51,274 - WARNING -  * Debugger is active!
+2024-01-20 19:22:51,280 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:22:55,970 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:22:55,971 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:22:55,980 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 19:22:55,980 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 19:22:55,981 - INFO -  * Restarting with stat
+2024-01-20 19:22:56,236 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:22:56,237 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:22:56,245 - WARNING -  * Debugger is active!
+2024-01-20 19:22:56,250 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:23:00,209 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 19:23:00,209 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:23:00,209 - INFO - Received local_dir: ./output
+2024-01-20 19:23:00,209 - INFO - Received gitHubAccessToken: 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
+2024-01-20 19:23:00,210 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:23:00,212 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 19:23:00,213 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpltewl2rw'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:23:04,901 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpltewl2rw'])'s unused stdout: 
+2024-01-20 19:23:04,903 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:23:04,903 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 19:23:04,903 - INFO - Cleaning up temporary directory
+2024-01-20 19:23:04,903 - INFO - Cloning repository: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:23:04,903 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp_nhmnihp'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:23:08,782 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp_nhmnihp'])'s unused stdout: 
+2024-01-20 19:23:08,784 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp_nhmnihp, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:23:08,790 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp_nhmnihp, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:23:08,795 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 19:23:08,795 - DEBUG - Value of included_files: {}
+2024-01-20 19:23:08,795 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 19:23:08,795 - INFO - Files to process: {}
+2024-01-20 19:23:08,795 - INFO - Generated file paths: []
+2024-01-20 19:23:08,795 - INFO - Final output paths: []
+2024-01-20 19:23:08,795 - INFO - Cleaning up temporary directory
+2024-01-20 19:23:08,950 - INFO - 127.0.0.1 - - [20/Jan/2024 19:23:08] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 19:23:29,321 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-20 19:23:29,375 - INFO -  * Restarting with stat
+2024-01-20 19:23:29,640 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:23:29,641 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:23:29,649 - WARNING -  * Debugger is active!
+2024-01-20 19:23:29,655 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:26:11,297 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/code_to_uml.py', reloading
+2024-01-20 19:26:11,360 - INFO -  * Restarting with stat
+2024-01-20 19:26:11,633 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:26:11,634 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:26:11,643 - WARNING -  * Debugger is active!
+2024-01-20 19:26:11,648 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:26:19,435 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:26:19,436 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:26:19,446 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 19:26:19,446 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 19:26:19,446 - INFO -  * Restarting with stat
+2024-01-20 19:26:19,703 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:26:19,704 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:26:19,712 - WARNING -  * Debugger is active!
+2024-01-20 19:26:19,718 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:26:24,391 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 19:26:24,392 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:26:24,392 - INFO - Received local_dir: ./output
+2024-01-20 19:26:24,392 - INFO - Received gitHubAccessToken: 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
+2024-01-20 19:26:24,393 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:26:24,395 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 19:26:24,395 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpzbjl28j2'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:26:29,634 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpzbjl28j2'])'s unused stdout: 
+2024-01-20 19:26:29,635 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:26:29,635 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 19:26:29,635 - INFO - Attempting to checkout branch: master
+2024-01-20 19:26:29,636 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpzbjl28j2, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 19:26:29,949 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpzbjl28j2, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 19:26:30,043 - INFO - Successfully checked out branch: master
+2024-01-20 19:26:30,043 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpzbjl28j2, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:26:30,049 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpzbjl28j2, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:26:30,054 - ERROR - Error: process_request() takes 1 positional argument but 2 were given
+2024-01-20 19:26:30,054 - INFO - 127.0.0.1 - - [20/Jan/2024 19:26:30] "[35m[1mPOST /generate-uml HTTP/1.1[0m" 500 -
+2024-01-20 19:31:04,270 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-20 19:31:04,330 - INFO -  * Restarting with stat
+2024-01-20 19:31:04,608 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:31:04,609 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:31:04,617 - WARNING -  * Debugger is active!
+2024-01-20 19:31:04,622 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:31:14,957 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:31:14,958 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:31:14,967 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 19:31:14,967 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 19:31:14,968 - INFO -  * Restarting with stat
+2024-01-20 19:31:15,223 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:31:15,224 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:31:15,232 - WARNING -  * Debugger is active!
+2024-01-20 19:31:15,237 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:31:24,442 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 19:31:24,442 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:31:24,443 - INFO - Received local_dir: ./output
+2024-01-20 19:31:24,443 - INFO - Received gitHubAccessToken: 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
+2024-01-20 19:31:24,443 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:31:24,446 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 19:31:24,447 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpufc_pf4i'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:31:29,434 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpufc_pf4i'])'s unused stdout: 
+2024-01-20 19:31:29,435 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:31:29,435 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 19:31:29,435 - INFO - Attempting to checkout branch: master
+2024-01-20 19:31:29,435 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpufc_pf4i, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 19:31:29,745 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpufc_pf4i, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 19:31:29,838 - INFO - Successfully checked out branch: master
+2024-01-20 19:31:29,839 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpufc_pf4i, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:31:29,845 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpufc_pf4i, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:31:29,850 - INFO - Cleaning up temporary directory
+2024-01-20 19:31:29,850 - INFO - Cloning repository: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:31:29,851 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpjdls_qbx'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:31:34,222 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpjdls_qbx'])'s unused stdout: 
+2024-01-20 19:31:34,224 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpjdls_qbx, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:31:34,230 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpjdls_qbx, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:31:34,234 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 19:31:34,234 - DEBUG - Value of included_files: {}
+2024-01-20 19:31:34,235 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 19:31:34,235 - INFO - Files to process: {}
+2024-01-20 19:31:34,235 - INFO - Generated file paths: []
+2024-01-20 19:31:34,235 - INFO - Final output paths: ([], '')
+2024-01-20 19:31:34,235 - INFO - UML diagram saved at: []
+2024-01-20 19:31:34,235 - INFO - UML diagram saved at: 
+2024-01-20 19:31:34,235 - INFO - Cleaning up temporary directory
+2024-01-20 19:31:34,385 - INFO - 127.0.0.1 - - [20/Jan/2024 19:31:34] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 19:35:18,830 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
+2024-01-20 19:35:18,887 - INFO -  * Restarting with stat
+2024-01-20 19:35:19,170 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:35:19,171 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:35:19,179 - WARNING -  * Debugger is active!
+2024-01-20 19:35:19,185 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:35:23,402 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:35:23,403 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:35:23,413 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 19:35:23,413 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 19:35:23,413 - INFO -  * Restarting with stat
+2024-01-20 19:35:23,669 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:35:23,670 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:35:23,677 - WARNING -  * Debugger is active!
+2024-01-20 19:35:23,682 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:35:32,258 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 19:35:32,258 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:35:32,258 - INFO - Received local_dir: ./output
+2024-01-20 19:35:32,258 - INFO - Received gitHubAccessToken: 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
+2024-01-20 19:35:32,259 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:35:32,261 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 19:35:32,261 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpai7vxoeh'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:35:36,722 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpai7vxoeh'])'s unused stdout: 
+2024-01-20 19:35:36,724 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:35:36,724 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 19:35:36,725 - INFO - Cleaning up temporary directory
+2024-01-20 19:35:36,725 - INFO - Cloning repository: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:35:36,725 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgn_teuz6'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:35:43,242 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgn_teuz6'])'s unused stdout: 
+2024-01-20 19:35:43,244 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgn_teuz6, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:35:43,250 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpgn_teuz6, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:35:43,254 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 19:35:43,255 - DEBUG - Value of included_files: {}
+2024-01-20 19:35:43,255 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 19:35:43,255 - INFO - Files to process: {}
+2024-01-20 19:35:43,255 - INFO - Generated file paths: []
+2024-01-20 19:35:43,255 - INFO - Final output paths: ([], '')
+2024-01-20 19:35:43,255 - INFO - UML diagram saved at: []
+2024-01-20 19:35:43,255 - INFO - UML diagram saved at: 
+2024-01-20 19:35:43,255 - INFO - Cleaning up temporary directory
+2024-01-20 19:35:43,409 - INFO - 127.0.0.1 - - [20/Jan/2024 19:35:43] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 19:49:18,443 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 19:49:18,510 - INFO -  * Restarting with stat
+2024-01-20 19:49:18,774 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:49:18,774 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:49:18,782 - WARNING -  * Debugger is active!
+2024-01-20 19:49:18,787 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:49:31,685 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:49:31,686 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:49:31,696 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 19:49:31,697 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 19:49:31,697 - INFO -  * Restarting with stat
+2024-01-20 19:49:31,951 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:49:31,951 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:49:31,959 - WARNING -  * Debugger is active!
+2024-01-20 19:49:31,964 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:49:38,540 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 19:49:38,540 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:49:38,540 - INFO - Received local_dir: ./output
+2024-01-20 19:49:38,540 - INFO - Received gitHubAccessToken: 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
+2024-01-20 19:49:38,542 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:49:38,544 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 19:49:38,545 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpssd6vdkj'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:49:43,344 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpssd6vdkj'])'s unused stdout: 
+2024-01-20 19:49:43,346 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:49:43,346 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 19:49:43,347 - INFO - Cleaning up temporary directory
+2024-01-20 19:49:43,347 - INFO - Cloning repository: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:49:43,347 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp4re89e9f'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:49:48,290 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp4re89e9f'])'s unused stdout: 
+2024-01-20 19:49:48,292 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp4re89e9f, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:49:48,298 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp4re89e9f, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:49:48,319 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 19:49:48,319 - DEBUG - Value of included_files: {}
+2024-01-20 19:49:48,319 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 19:49:48,319 - INFO - Files to process: {}
+2024-01-20 19:49:48,319 - INFO - Generated file paths: []
+2024-01-20 19:49:48,319 - INFO - Final output paths: ([], '')
+2024-01-20 19:49:48,319 - INFO - UML diagram saved at: []
+2024-01-20 19:49:48,319 - INFO - UML diagram saved at: 
+2024-01-20 19:49:48,319 - INFO - Cleaning up temporary directory
+2024-01-20 19:49:48,477 - INFO - 127.0.0.1 - - [20/Jan/2024 19:49:48] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 19:51:36,839 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:51:36,840 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:51:36,849 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 19:51:36,849 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 19:51:36,850 - INFO -  * Restarting with stat
+2024-01-20 19:51:37,104 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 19:51:37,105 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 19:51:37,113 - WARNING -  * Debugger is active!
+2024-01-20 19:51:37,119 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 19:51:45,760 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 19:51:45,761 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:51:45,761 - INFO - Received local_dir: ./output
+2024-01-20 19:51:45,761 - INFO - Received gitHubAccessToken: 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
+2024-01-20 19:51:45,762 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:51:45,764 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 19:51:45,765 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpvi030e1h'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:51:50,464 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpvi030e1h'])'s unused stdout: 
+2024-01-20 19:51:50,465 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:51:50,465 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 19:51:50,465 - INFO - Cleaning up temporary directory
+2024-01-20 19:51:50,466 - INFO - Cloning repository: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 19:51:50,466 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmprkzfgz_2'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 19:51:54,932 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmprkzfgz_2'])'s unused stdout: 
+2024-01-20 19:51:54,934 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmprkzfgz_2, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:51:54,939 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmprkzfgz_2, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 19:51:54,960 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 19:51:54,960 - DEBUG - Value of included_files: {}
+2024-01-20 19:51:54,960 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 19:51:54,960 - INFO - Files to process: {}
+2024-01-20 19:51:54,960 - INFO - Generated file paths: []
+2024-01-20 19:51:54,960 - INFO - Final output paths: ([], '')
+2024-01-20 19:51:54,960 - INFO - UML diagram saved at: []
+2024-01-20 19:51:54,960 - INFO - UML diagram saved at: 
+2024-01-20 19:51:54,960 - INFO - Cleaning up temporary directory
+2024-01-20 19:51:55,113 - INFO - 127.0.0.1 - - [20/Jan/2024 19:51:55] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 20:05:43,263 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 20:05:43,324 - INFO -  * Restarting with stat
+2024-01-20 20:05:43,608 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:05:43,609 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:05:43,617 - WARNING -  * Debugger is active!
+2024-01-20 20:05:43,624 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:11:08,593 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 20:11:08,658 - INFO -  * Restarting with stat
+2024-01-20 20:11:08,957 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:11:08,958 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:11:08,967 - WARNING -  * Debugger is active!
+2024-01-20 20:11:08,972 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:11:15,338 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:11:15,339 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:11:15,349 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 20:11:15,349 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 20:11:15,349 - INFO -  * Restarting with stat
+2024-01-20 20:11:15,617 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:11:15,617 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:11:15,626 - WARNING -  * Debugger is active!
+2024-01-20 20:11:15,631 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:11:20,107 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 20:11:20,108 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:11:20,108 - INFO - Received local_dir: ./output
+2024-01-20 20:11:20,108 - INFO - Received gitHubAccessToken: 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
+2024-01-20 20:11:20,108 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:11:20,111 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 20:11:20,112 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp6b5zvdg_'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:11:24,584 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp6b5zvdg_'])'s unused stdout: 
+2024-01-20 20:11:24,585 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:11:24,585 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 20:11:24,585 - INFO - Cleaning up temporary directory
+2024-01-20 20:11:24,586 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:11:24,586 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpolen6soa'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:11:29,769 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpolen6soa'])'s unused stdout: 
+2024-01-20 20:11:29,770 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:11:29,770 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpolen6soa, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:11:29,776 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpolen6soa, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:11:29,797 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 20:11:29,797 - DEBUG - Value of included_files: {}
+2024-01-20 20:11:29,798 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 20:11:29,798 - INFO - Files to process: {}
+2024-01-20 20:11:29,798 - INFO - Generated file paths: []
+2024-01-20 20:11:29,798 - INFO - Final output paths: ([], '')
+2024-01-20 20:11:29,798 - INFO - UML diagram saved at: []
+2024-01-20 20:11:29,798 - INFO - UML diagram saved at: 
+2024-01-20 20:11:29,798 - INFO - Cleaning up temporary directory
+2024-01-20 20:11:29,945 - INFO - 127.0.0.1 - - [20/Jan/2024 20:11:29] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 20:16:42,592 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 20:16:42,651 - INFO -  * Restarting with stat
+2024-01-20 20:16:42,926 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:16:42,927 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:16:42,936 - WARNING -  * Debugger is active!
+2024-01-20 20:16:42,942 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:16:54,607 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:16:54,607 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:16:54,617 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 20:16:54,618 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 20:16:54,618 - INFO -  * Restarting with stat
+2024-01-20 20:16:54,878 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:16:54,879 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:16:54,888 - WARNING -  * Debugger is active!
+2024-01-20 20:16:54,893 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:16:58,558 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 20:16:58,558 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:16:58,558 - INFO - Received local_dir: ./output
+2024-01-20 20:16:58,558 - INFO - Received gitHubAccessToken: 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
+2024-01-20 20:16:58,560 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:16:58,563 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 20:16:58,563 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpas95f0q6'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:17:03,094 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpas95f0q6'])'s unused stdout: 
+2024-01-20 20:17:03,095 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:17:03,095 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 20:17:03,096 - INFO - Cleaning up temporary directory
+2024-01-20 20:17:03,096 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:17:03,096 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpwcmy8olf'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:17:07,689 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpwcmy8olf'])'s unused stdout: 
+2024-01-20 20:17:07,690 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:17:07,691 - ERROR - Error during UML generation: name 'branch_name' is not defined
+2024-01-20 20:17:07,691 - INFO - Cleaning up temporary directory
+2024-01-20 20:17:07,836 - INFO - 127.0.0.1 - - [20/Jan/2024 20:17:07] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 20:19:48,666 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 20:19:48,722 - INFO -  * Restarting with stat
+2024-01-20 20:19:48,991 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:19:48,992 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:19:49,001 - WARNING -  * Debugger is active!
+2024-01-20 20:19:49,005 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:22:18,079 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 20:22:18,131 - INFO -  * Restarting with stat
+2024-01-20 20:22:18,404 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:22:18,405 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:22:18,413 - WARNING -  * Debugger is active!
+2024-01-20 20:22:18,419 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:22:23,590 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 20:22:23,645 - INFO -  * Restarting with stat
+2024-01-20 20:22:23,922 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:22:23,923 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:22:23,931 - WARNING -  * Debugger is active!
+2024-01-20 20:22:23,937 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:22:30,251 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:22:30,252 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:22:30,262 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 20:22:30,262 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 20:22:30,263 - INFO -  * Restarting with stat
+2024-01-20 20:22:30,519 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:22:30,520 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:22:30,528 - WARNING -  * Debugger is active!
+2024-01-20 20:22:30,533 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:23:21,812 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 20:23:21,812 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:23:21,812 - INFO - Received local_dir: ./output
+2024-01-20 20:23:21,812 - INFO - Received gitHubAccessToken: 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
+2024-01-20 20:23:21,813 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:23:21,815 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 20:23:21,816 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpuwckklzw'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:23:26,140 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpuwckklzw'])'s unused stdout: 
+2024-01-20 20:23:26,141 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:23:26,142 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 20:23:26,142 - INFO - Cleaning up temporary directory
+2024-01-20 20:23:26,142 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:23:26,142 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpi2vx16fa'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:23:31,993 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpi2vx16fa'])'s unused stdout: 
+2024-01-20 20:23:31,994 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:23:31,995 - INFO - Attempting to checkout branch: master
+2024-01-20 20:23:31,995 - DEBUG - Popen(['git', 'fetch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpi2vx16fa, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 20:23:32,235 - DEBUG - Popen(['git', 'checkout', 'master'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpi2vx16fa, stdin=None, shell=False, universal_newlines=False)
+2024-01-20 20:23:32,336 - INFO - Successfully checked out branch: master
+2024-01-20 20:23:32,337 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpi2vx16fa, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:23:32,343 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpi2vx16fa, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:23:32,365 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 20:23:32,365 - DEBUG - Value of included_files: {}
+2024-01-20 20:23:32,365 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 20:23:32,366 - INFO - Files to process: {}
+2024-01-20 20:23:32,366 - INFO - Generated file paths: []
+2024-01-20 20:23:32,366 - INFO - Final output paths: ([], '')
+2024-01-20 20:23:32,366 - INFO - UML diagram saved at: []
+2024-01-20 20:23:32,366 - INFO - UML diagram saved at: 
+2024-01-20 20:23:32,366 - INFO - Cleaning up temporary directory
+2024-01-20 20:23:32,518 - INFO - 127.0.0.1 - - [20/Jan/2024 20:23:32] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 20:32:16,150 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 20:32:16,203 - INFO -  * Restarting with stat
+2024-01-20 20:32:16,466 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:32:16,467 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:32:16,475 - WARNING -  * Debugger is active!
+2024-01-20 20:32:16,480 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:32:33,390 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:32:33,391 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:32:33,400 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 20:32:33,401 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 20:32:33,401 - INFO -  * Restarting with stat
+2024-01-20 20:32:33,654 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:32:33,655 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:32:33,663 - WARNING -  * Debugger is active!
+2024-01-20 20:32:33,667 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:32:43,702 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 20:32:43,703 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:32:43,703 - INFO - Received local_dir: ./output
+2024-01-20 20:32:43,703 - INFO - Received gitHubAccessToken: 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
+2024-01-20 20:32:43,704 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:32:43,706 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 20:32:43,707 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp825eem3e'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:32:47,156 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp825eem3e'])'s unused stdout: 
+2024-01-20 20:32:47,159 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:32:47,159 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 20:32:47,159 - INFO - Cleaning up temporary directory
+2024-01-20 20:32:47,159 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:32:47,159 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpg0i_4v3d'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:32:51,291 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpg0i_4v3d'])'s unused stdout: 
+2024-01-20 20:32:51,293 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:32:51,293 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpg0i_4v3d, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:32:51,301 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpg0i_4v3d, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:32:51,330 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 20:32:51,330 - DEBUG - Value of included_files: {}
+2024-01-20 20:32:51,330 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 20:32:51,331 - INFO - Files to process: {}
+2024-01-20 20:32:51,331 - INFO - Generated file paths: []
+2024-01-20 20:32:51,331 - INFO - Final output paths: ([], '')
+2024-01-20 20:32:51,331 - INFO - UML diagram saved at: []
+2024-01-20 20:32:51,331 - INFO - UML diagram saved at: 
+2024-01-20 20:32:51,331 - INFO - Cleaning up temporary directory
+2024-01-20 20:32:51,489 - INFO - 127.0.0.1 - - [20/Jan/2024 20:32:51] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 20:37:48,904 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 20:37:48,958 - INFO -  * Restarting with stat
+2024-01-20 20:37:49,241 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:37:49,242 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:37:49,250 - WARNING -  * Debugger is active!
+2024-01-20 20:37:49,256 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:46:07,516 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:46:07,517 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:46:07,526 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 20:46:07,527 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 20:46:07,527 - INFO -  * Restarting with stat
+2024-01-20 20:46:07,781 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:46:07,782 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:46:07,789 - WARNING -  * Debugger is active!
+2024-01-20 20:46:07,794 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:46:18,891 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 20:46:18,891 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:46:18,891 - INFO - Received local_dir: ./output
+2024-01-20 20:46:18,891 - INFO - Received gitHubAccessToken: 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
+2024-01-20 20:46:18,892 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:46:18,895 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 20:46:18,896 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp3s3khqlm'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:46:24,091 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp3s3khqlm'])'s unused stdout: 
+2024-01-20 20:46:24,093 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:46:24,093 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 20:46:24,093 - INFO - Cleaning up temporary directory
+2024-01-20 20:46:24,093 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:46:24,093 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp2g9xsu3h'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:46:28,037 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp2g9xsu3h'])'s unused stdout: 
+2024-01-20 20:46:28,038 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:46:28,039 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp2g9xsu3h, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:46:28,044 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmp2g9xsu3h, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:46:28,066 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 20:46:28,067 - DEBUG - Value of included_files: {}
+2024-01-20 20:46:28,067 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 20:46:28,067 - INFO - Files to process: {}
+2024-01-20 20:46:28,067 - INFO - Generated file paths: []
+2024-01-20 20:46:28,067 - INFO - Final output paths: ([], '')
+2024-01-20 20:46:28,067 - INFO - UML diagram saved at: []
+2024-01-20 20:46:28,067 - INFO - UML diagram saved at: 
+2024-01-20 20:46:28,067 - INFO - Cleaning up temporary directory
+2024-01-20 20:46:28,226 - INFO - 127.0.0.1 - - [20/Jan/2024 20:46:28] "POST /generate-uml HTTP/1.1" 200 -
+2024-01-20 20:52:32,883 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/routes/uml_from_repo.py', reloading
+2024-01-20 20:52:32,946 - INFO -  * Restarting with stat
+2024-01-20 20:52:33,218 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:52:33,219 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:52:33,227 - WARNING -  * Debugger is active!
+2024-01-20 20:52:33,233 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:52:42,313 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:52:42,314 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:52:42,324 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-20 20:52:42,324 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-20 20:52:42,324 - INFO -  * Restarting with stat
+2024-01-20 20:52:42,583 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-20 20:52:42,584 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-20 20:52:42,592 - WARNING -  * Debugger is active!
+2024-01-20 20:52:42,597 - INFO -  * Debugger PIN: 139-904-016
+2024-01-20 20:52:46,235 - INFO - Received JSON data: {'gitRepoUrl': 'https://github.com/mprestonsparks/diagrammr.git', 'local_dir': '/Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output', 'gitHubAccessToken': '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'}
+2024-01-20 20:52:46,235 - INFO - Received gitRepoUrl: https://github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:52:46,235 - INFO - Received local_dir: ./output
+2024-01-20 20:52:46,235 - INFO - Received gitHubAccessToken: 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
+2024-01-20 20:52:46,236 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:52:46,238 - DEBUG - Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+2024-01-20 20:52:46,239 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpwuv96fws'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:52:50,910 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpwuv96fws'])'s unused stdout: 
+2024-01-20 20:52:50,913 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:52:50,913 - INFO - Contents of the cloned repository: ['.DS_Store', 'requirements.txt', '__init__.py', 'README.md', 'logs', '.gitignore', 'execute_generate_uml.log', 'uml_generation.log', '.github', 'venv', '.git', 'main.log', 'src']
+2024-01-20 20:52:50,913 - INFO - Cleaning up temporary directory
+2024-01-20 20:52:50,913 - INFO - Cloning repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:52:50,914 - DEBUG - Popen(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpl6lanf6n'], cwd=/Users/preston/Documents/gitRepos/diagrammr, stdin=None, shell=False, universal_newlines=True)
+2024-01-20 20:52:56,195 - DEBUG - Cmd(['git', 'clone', '-v', '--', 'https://*****@github.com/mprestonsparks/diagrammr.git', '/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpl6lanf6n'])'s unused stdout: 
+2024-01-20 20:52:56,196 - INFO - Successfully cloned repository: https://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@github.com/mprestonsparks/diagrammr.git
+2024-01-20 20:52:56,197 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpl6lanf6n, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:52:56,202 - DEBUG - Popen(['git', 'cat-file', '--batch'], cwd=/var/folders/pc/c8njlgpx5t52sk4gvk520t780000gn/T/tmpl6lanf6n, stdin=<valid stream>, shell=False, universal_newlines=False)
+2024-01-20 20:52:56,225 - DEBUG - Type of included_files: <class 'dict'>
+2024-01-20 20:52:56,226 - DEBUG - Value of included_files: {'src/routes/__init__.py': '', 'src/routes/generate_uml_diagram.py': 'import os\nimport subprocess\nimport json\nimport git\nimport tempfile\nimport shutil\nimport openai\nimport logging\nfrom logging import handlers  \nfrom openai_api import OpenAIAPI \nfrom routes.retrieve_code import retrieve_code\n\n# Create an instance of the OpenAI API\napi = OpenAIAPI()\n\n# Configure logging to write to a file\nlog_filename = \'uml_generation.log\'\nlog_handler = handlers.RotatingFileHandler(log_filename, maxBytes=1024*1024, backupCount=5)  # Log file with rotation\nlog_formatter = logging.Formatter(\'%(asctime)s - %(levelname)s - %(message)s\')\nlog_handler.setFormatter(log_formatter)\nlogger = logging.getLogger()\nlogger.addHandler(log_handler)\nlogger.setLevel(logging.DEBUG)\n\n# Assume OPENAI_API_KEY is set in the environment variables\nopenai.api_key = os.getenv("OPENAI_API_KEY")\n\ndef process_uml_request(data):\n    git_repo_url = data.get(\'gitRepoUrl\')\n    output_directory = "./output"\n    github_access_token = data.get(\'gitHubAccessToken\')\n    if not git_repo_url or not output_directory or not github_access_token:\n        logging.error("Missing required parameters")\n        return {"error": "Missing required parameters"}, 400\n\n    try:\n        temp_dir = tempfile.mkdtemp()\n\n        # Clone the repository\n        logging.info(f"Cloning repository: {git_repo_url}")\n        repo = git.Repo.clone_from(git_repo_url, temp_dir, github_access_token)\n        \n        # Load the config\n        with open(\'config.json\', \'r\') as f:\n            config = json.load(f)\n        \n        # Create a new object with the files to include\n        files_to_include = {}\n        for file in repo.tree():\n            if file.path in config[\'include\']:\n                with open(file.abspath, \'r\') as f:\n                    files_to_include[file.path] = f.read()\n\n        logging.debug(f"Type of files_to_include: {type(files_to_include)}")  # Debugging statement\n        logging.debug(f"Value of files_to_include: {files_to_include}")  # Debugging statement\n\n        uml_code = generate_uml_content(files_to_include)\n\n        # Save the UML diagram to a file\n        logging.info(f"Saving UML diagram to {output_directory}")\n        final_output_path = api.save_uml_diagram(uml_code, output_directory)\n        logging.info(f"UML diagram saved at: {final_output_path}")  # Log the path where the UML diagram was saved\n\n\n        return {\n            "message": "UML diagrams generated successfully",\n            "details": {\n                "Repository": git_repo_url,\n                "Output Path": final_output_path\n            }\n        }, 200\n\n    except Exception as e:\n        logging.error(f"Error during UML generation: {str(e)}")\n        return {"error": str(e)}, 500\n\n    finally:\n        # Clean up the temporary directory\n        logging.info("Cleaning up temporary directory")\n        shutil.rmtree(temp_dir)\n\n\ndef generate_uml_content(files):\n    uml_code = ""\n    for file_path, code in files.items():\n        # Call OpenAI API to generate UML diagram for each file\n        logging.info(f"Calling OpenAI API to generate UML diagram for {file_path}")\n        uml_code_for_file = api.generate_uml_diagram(code)\n        logging.info(f"Received UML code for {file_path}: {uml_code_for_file}")  # Log the UML code received for each file\n        if not uml_code_for_file or "UML generation failed" in uml_code_for_file:\n            logging.error(f"Failed to generate UML diagram for {file_path}")\n            raise ValueError(f"Failed to generate UML diagram for {file_path}")\n        uml_code += uml_code_for_file\n    return uml_code', 'src/routes/retrieve_code.py': 'import git\nimport json\nimport os\n\ndef clone_repo(repo_url, temp_dir, access_token):\n    try:\n        # Modify the URL to include the access token\n        if access_token:\n            repo_url = repo_url.replace(\'https://\', f\'https://{access_token}@\')\n        repo = git.Repo.clone_from(repo_url, temp_dir)\n        return repo\n    except Exception as e:\n        raise ValueError(f"Failed to clone repository: {str(e)}")\n\ndef retrieve_code(repo, branch_name):\n    try:\n        print(f"Attempting to checkout branch: {branch_name}")  # Diagnostic print statement\n        repo.git.fetch()  # Fetch the latest updates from the remote\n        repo.git.checkout(branch_name)\n        \n        # Load the config\n        config_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), \'config.json\')\n        with open(config_file_path, \'r\') as f:\n            config = json.load(f)\n        ignore_list = config.get(\'ignore\', [])\n        include_list = config.get(\'include\', [])\n\n        # Create a new dictionary to store file paths and their corresponding code\n        files_to_include = {}\n        for file in repo.tree():\n            if any(file.path.endswith(ext) for ext in include_list) and not any(ignored_file in file.path for ignored_file in ignore_list):\n                try:\n                    with open(file.abspath, \'r\') as f:\n                        files_to_include[file.path] = f.read()\n                except FileNotFoundError:\n                    print(f"Ignoring missing file: {file.path}")  # Diagnostic print statement\n\n        return files_to_include\n    except Exception as e:\n        raise ValueError(f"Failed to retrieve code: {str(e)}")', 'src/scripts/__init__.py': '', 'src/scripts/execute_generate_uml.py': "import json\nimport os\nimport requests\nimport tempfile\nimport logging\nfrom dotenv import load_dotenv\n\n\n# Load environment variables from .env file\nload_dotenv()\n\n# Configure logging\nlogging.basicConfig(filename='execute_generate_uml.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')\n\n# Current file's directory\ncurrent_dir = os.path.dirname(os.path.abspath(__file__))\n# Configuration file path\nconfig_file_path = os.path.join(current_dir, 'config.json')\n\n# Read configuration from the JSON file\nwith open(config_file_path, 'r') as config_file:\n    config_data = json.load(config_file)\n\n# Retrieve the GitHub access token from environment variables\ngithub_token = os.getenv('GITHUB_PAT')\n\n# Endpoint URL\nurl = 'http://127.0.0.1:5000/generate-uml'\n\n# Headers\nheaders = {\n    'Content-Type': 'application/json'\n}\n\n# Update the GitHub access token in the config data\nconfig_data['gitHubAccessToken'] = github_token\n\n# Log the JSON data being sent in the request\nlogging.info(f'Sending JSON data to {url}:')\nlogging.info(json.dumps(config_data, indent=2))\n\ntry:\n    # Make the POST request\n    response = requests.post(url, headers=headers, json=config_data)\n\n    # Log the response from the server\n    logging.info(f'Response from server ({url}):')\n    logging.info(f'Status Code: {response.status_code}')\n    logging.info(f'Response Text: {response.text}')\n\n    # Print the response from the server\n    print(response.text)\n\nexcept Exception as e:\n    # Log any exceptions that occur\n    logging.error(f'Error occurred: {str(e)}')\n"}
+2024-01-20 20:52:56,226 - INFO - Saving UML diagram to /Users/preston/Documents/gitRepos/diagrammr/src/scripts/../../output
+2024-01-20 20:52:56,226 - INFO - Files to process: {'src/routes/__init__.py': '', 'src/routes/generate_uml_diagram.py': 'import os\nimport subprocess\nimport json\nimport git\nimport tempfile\nimport shutil\nimport openai\nimport logging\nfrom logging import handlers  \nfrom openai_api import OpenAIAPI \nfrom routes.retrieve_code import retrieve_code\n\n# Create an instance of the OpenAI API\napi = OpenAIAPI()\n\n# Configure logging to write to a file\nlog_filename = \'uml_generation.log\'\nlog_handler = handlers.RotatingFileHandler(log_filename, maxBytes=1024*1024, backupCount=5)  # Log file with rotation\nlog_formatter = logging.Formatter(\'%(asctime)s - %(levelname)s - %(message)s\')\nlog_handler.setFormatter(log_formatter)\nlogger = logging.getLogger()\nlogger.addHandler(log_handler)\nlogger.setLevel(logging.DEBUG)\n\n# Assume OPENAI_API_KEY is set in the environment variables\nopenai.api_key = os.getenv("OPENAI_API_KEY")\n\ndef process_uml_request(data):\n    git_repo_url = data.get(\'gitRepoUrl\')\n    output_directory = "./output"\n    github_access_token = data.get(\'gitHubAccessToken\')\n    if not git_repo_url or not output_directory or not github_access_token:\n        logging.error("Missing required parameters")\n        return {"error": "Missing required parameters"}, 400\n\n    try:\n        temp_dir = tempfile.mkdtemp()\n\n        # Clone the repository\n        logging.info(f"Cloning repository: {git_repo_url}")\n        repo = git.Repo.clone_from(git_repo_url, temp_dir, github_access_token)\n        \n        # Load the config\n        with open(\'config.json\', \'r\') as f:\n            config = json.load(f)\n        \n        # Create a new object with the files to include\n        files_to_include = {}\n        for file in repo.tree():\n            if file.path in config[\'include\']:\n                with open(file.abspath, \'r\') as f:\n                    files_to_include[file.path] = f.read()\n\n        logging.debug(f"Type of files_to_include: {type(files_to_include)}")  # Debugging statement\n        logging.debug(f"Value of files_to_include: {files_to_include}")  # Debugging statement\n\n        uml_code = generate_uml_content(files_to_include)\n\n        # Save the UML diagram to a file\n        logging.info(f"Saving UML diagram to {output_directory}")\n        final_output_path = api.save_uml_diagram(uml_code, output_directory)\n        logging.info(f"UML diagram saved at: {final_output_path}")  # Log the path where the UML diagram was saved\n\n\n        return {\n            "message": "UML diagrams generated successfully",\n            "details": {\n                "Repository": git_repo_url,\n                "Output Path": final_output_path\n            }\n        }, 200\n\n    except Exception as e:\n        logging.error(f"Error during UML generation: {str(e)}")\n        return {"error": str(e)}, 500\n\n    finally:\n        # Clean up the temporary directory\n        logging.info("Cleaning up temporary directory")\n        shutil.rmtree(temp_dir)\n\n\ndef generate_uml_content(files):\n    uml_code = ""\n    for file_path, code in files.items():\n        # Call OpenAI API to generate UML diagram for each file\n        logging.info(f"Calling OpenAI API to generate UML diagram for {file_path}")\n        uml_code_for_file = api.generate_uml_diagram(code)\n        logging.info(f"Received UML code for {file_path}: {uml_code_for_file}")  # Log the UML code received for each file\n        if not uml_code_for_file or "UML generation failed" in uml_code_for_file:\n            logging.error(f"Failed to generate UML diagram for {file_path}")\n            raise ValueError(f"Failed to generate UML diagram for {file_path}")\n        uml_code += uml_code_for_file\n    return uml_code', 'src/routes/retrieve_code.py': 'import git\nimport json\nimport os\n\ndef clone_repo(repo_url, temp_dir, access_token):\n    try:\n        # Modify the URL to include the access token\n        if access_token:\n            repo_url = repo_url.replace(\'https://\', f\'https://{access_token}@\')\n        repo = git.Repo.clone_from(repo_url, temp_dir)\n        return repo\n    except Exception as e:\n        raise ValueError(f"Failed to clone repository: {str(e)}")\n\ndef retrieve_code(repo, branch_name):\n    try:\n        print(f"Attempting to checkout branch: {branch_name}")  # Diagnostic print statement\n        repo.git.fetch()  # Fetch the latest updates from the remote\n        repo.git.checkout(branch_name)\n        \n        # Load the config\n        config_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), \'config.json\')\n        with open(config_file_path, \'r\') as f:\n            config = json.load(f)\n        ignore_list = config.get(\'ignore\', [])\n        include_list = config.get(\'include\', [])\n\n        # Create a new dictionary to store file paths and their corresponding code\n        files_to_include = {}\n        for file in repo.tree():\n            if any(file.path.endswith(ext) for ext in include_list) and not any(ignored_file in file.path for ignored_file in ignore_list):\n                try:\n                    with open(file.abspath, \'r\') as f:\n                        files_to_include[file.path] = f.read()\n                except FileNotFoundError:\n                    print(f"Ignoring missing file: {file.path}")  # Diagnostic print statement\n\n        return files_to_include\n    except Exception as e:\n        raise ValueError(f"Failed to retrieve code: {str(e)}")', 'src/scripts/__init__.py': '', 'src/scripts/execute_generate_uml.py': "import json\nimport os\nimport requests\nimport tempfile\nimport logging\nfrom dotenv import load_dotenv\n\n\n# Load environment variables from .env file\nload_dotenv()\n\n# Configure logging\nlogging.basicConfig(filename='execute_generate_uml.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')\n\n# Current file's directory\ncurrent_dir = os.path.dirname(os.path.abspath(__file__))\n# Configuration file path\nconfig_file_path = os.path.join(current_dir, 'config.json')\n\n# Read configuration from the JSON file\nwith open(config_file_path, 'r') as config_file:\n    config_data = json.load(config_file)\n\n# Retrieve the GitHub access token from environment variables\ngithub_token = os.getenv('GITHUB_PAT')\n\n# Endpoint URL\nurl = 'http://127.0.0.1:5000/generate-uml'\n\n# Headers\nheaders = {\n    'Content-Type': 'application/json'\n}\n\n# Update the GitHub access token in the config data\nconfig_data['gitHubAccessToken'] = github_token\n\n# Log the JSON data being sent in the request\nlogging.info(f'Sending JSON data to {url}:')\nlogging.info(json.dumps(config_data, indent=2))\n\ntry:\n    # Make the POST request\n    response = requests.post(url, headers=headers, json=config_data)\n\n    # Log the response from the server\n    logging.info(f'Response from server ({url}):')\n    logging.info(f'Status Code: {response.status_code}')\n    logging.info(f'Response Text: {response.text}')\n\n    # Print the response from the server\n    print(response.text)\n\nexcept Exception as e:\n    # Log any exceptions that occur\n    logging.error(f'Error occurred: {str(e)}')\n"}
+2024-01-20 20:52:56,226 - INFO - Processing file: src/routes/__init__.py
+2024-01-20 20:52:56,226 - INFO - UML code generated for src/routes/__init__.py: 
+2024-01-20 20:52:56,226 - ERROR - Failed to generate UML diagram for src/routes/__init__.py
+2024-01-20 20:52:56,226 - ERROR - Error during UML generation: Failed to generate UML diagram for src/routes/__init__.py
+2024-01-20 20:52:56,226 - INFO - Cleaning up temporary directory
+2024-01-20 20:52:56,386 - INFO - 127.0.0.1 - - [20/Jan/2024 20:52:56] "POST /generate-uml HTTP/1.1" 200 -
