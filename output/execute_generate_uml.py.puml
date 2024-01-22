@@ -1,75 +1,153 @@
-@startuml name
+@startuml
+title execute_generate_uml.py
+rrent_dir, 'config.json')
 
-class Config
-    Current_dir : string
-    Config_file_path : string
-    + get_config() : dict
-    + update_config(config) : void
+@startuml
+Class Importer {
+    - json
+    - os
+    - requests
+    - logging
+    - load_dotenv
+    - log_handler
+    - log_formatter
+    - logger
+    - current_dir
+    - config_file_path
 
-Config --> Current_dir
-Config --> Config_file_path
-Config --o logger
+    + LoadEnvVariables() 
+    + ConfigureLogging() 
+    + __init__()
+}
 
+Class LoadEnvVariables {
+    - dotenv 
 
-class Logger
-    + log_handler : RotatingFileHandler
-    + log_formatter : Formatter
-    + logger : Logger
-    + set_handler(handler) : void
-    + set_formatter(formatter) : void
-    + add_handler(handler) : void
-    + set_level(level) : void
-    + log(msg, level) : void
+    + loadDotEnv()
+}
 
-Logger --o log_handler
-Logger --o log_formatter
-Logger --o logger
+Class ConfigureLogging {
+    - os
+    - handlers
+    - log_directory
+    - log_filename
+    - log_handler
+    - log_formatter
+    - logger
+    - level
 
+    + __init__()
+    + setLogFile()
+    + setFormatter()
+    + setLevel()
+}
 
-class UmlGenerator
-    + config : Config
-    + logger : Logger
-    + execute() : void
-    + generate_uml() : void
-    + save_file(content) : void
+Class CurrentDirectory {
+    - os
+    - absPath
 
-UmlGenerator --o config
-UmlGenerator --o logger
+    + __init__()
+    + getCurrentDirectory()
+}
 
-class RequestManager
-    + api_url : string
-    + config : Config
-    + logger : Logger
-    + get_umls(concepts) : list
-    + process_request(response) : dict
-    + send_request(params) : json
+Class ConfigurationFile {
+    - os
+    - current_dir
+    - fileName
 
-RequestManager --o config
-RequestManager --o logger
+    + __init__()
+    + getPath()
+}
 
-class DOTEnv
-    + load_dotenv() : void
+Class LogDirectory {
+    - os
+    - parent_dir
+    - directory
 
-DOTEnv --o UmlGenerator
+    + __init__()
+    + makeDirectory()
+}
 
-class JsonManager
-    + config_file_path : string
-    + get_data() : dict
-    + update_data(new_data) : void
+Importer --> LoadEnvVariables
+Importer --> ConfigureLogging
+Importer --> CurrentDirectory
+Importer --> ConfigurationFile
+LoadEnvVariables --> dotenv
+ConfigureLogging --> os
+ConfigureLogging --> handlers
+ConfigureLogging --> logger
+CurrentDirectory --> os
+CurrentDirectory --> absPath
+ConfigurationFile --> os
+ConfigurationFile --> current_dir
+ConfigurationFile --> fileName
+LogDirectory --> os
+LogDirectory --> parent_dir
+LogDirectory --> directory
 
-JsonManager --o Config
-JsonManager --o Config_file_path
+@endumlWrite the response to a file
+    with open(os.path.join(current_dir, 'uml_diagram.png'), 'wb') as uml_file:
+        uml_file.write(response.content)
 
-class OS
-    + get_current_dir() : string
+except requests.exceptions.RequestException as e:
+    logging.error(f'An error occurred while making the request: {e}')
 
-OS --o Config
-OS --o Current_dir
+@startuml
 
-class Requests
-    + get(url) : json
+class UMLCreator {
+    - current_dir: string
+    - config_file_path: string
+    - config_data: json
+    - github_token: string
+    - url: string
+    - headers: dict
 
-Requests --o RequestManager
+    + UMLCreator(current_dir, config_file_path)
 
+    + read_config()
+    + get_github_token()
+    + generate_diagram()
+}
+
+UMLCreator --right--> JSONConverter
+UMLCreator --down--> GithubTokenRetriever
+UMLCreator --down--> HttpRequester
+class JSONConverter {
+    + convert_to_json()
+}
+class GithubTokenRetriever {
+    + retrieve_token()
+    - github_token: string
+}
+
+class HttpRequester {
+    + send_post_request()
+    + set_url()
+    + set_headers()
+    - url: string
+    - headers: dict
+}
+
+@enduml@startuml
+
+class PrintResponse {
+    - response: Object
+    + print(response) : void
+}
+
+class SaveToFile {
+    - output_dir: String
+    - output_file: Object
+    - response: Object
+
+    + saveToFile(response) : void
+}
+
+class Log {
+    + log(message) : void
+}
+
+PrintResponse --> SaveToFile
+SaveToFile --> Log
 
 @enduml

@@ -11,6 +11,7 @@ from logging import handlers
 from routes.retrieve_code import clone_repo, retrieve_code
 from routes.code_to_uml import generate_content  # Import the function from code_to_uml.py
 
+
 # Configure logging to write to a file
 log_directory = 'logs'
 # Create the directory if it doesn't exist

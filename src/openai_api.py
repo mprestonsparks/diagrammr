@@ -5,6 +5,7 @@ from logging import handlers
 from openai import OpenAI, OpenAIError
 from dotenv import load_dotenv
 
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -36,8 +37,11 @@ class OpenAIAPI:
         self.MAX_TOKENS = 1024
         self.OUTPUT_DIRECTORY = "src/output"
 
+    def write_response_to_file(self, response, filename):
+        with open(f"{filename}.txt", 'w') as f:
+            f.write(response)
 
-    def generate_from_code(self, code):
+    def generate_from_code(self, code, title):
         # Split the code into chunks of MAX_TOKENS
         code_chunks = [code[i:i+self.MAX_TOKENS] for i in range(0, len(code), self.MAX_TOKENS)]
 
@@ -54,11 +58,17 @@ class OpenAIAPI:
                 # Log the response from OpenAI
                 logging.info(f"Received response from OpenAI: {response.choices[0].text}")  # Log the response from OpenAI
 
-                generated_code += response.choices[0].text.strip()  # Append the generated text to the UML code
+                # Write the response to a .txt file
+                self.write_response_to_file(response.choices[0].text, title)
+
+                # Append the generated text to the UML code
+                generated_code += response.choices[0].text.strip()
             except OpenAIError as e:
                 logging.error(f"An error occurred while sending the prompt: {e}")  # Log the error message
                 return f"An error occurred: {e}"  # Return a message if an OpenAI API error occurs
 
+        # Add the @startuml, title and @enduml tags only once for each UML diagram
+        generated_code = f"@startuml\n" + f"title {title}\n" + generated_code + "\n@enduml\n"
         return generated_code
     
 

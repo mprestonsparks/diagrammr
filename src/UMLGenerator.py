@@ -19,7 +19,7 @@ class UMLGenerator:
             logging.info(f"Generating UML for file: {file}")
             with open(file, 'r') as f:
                 file_content = f.read()
-            uml_content = self.api.generate_from_code(file_content)
+            uml_content = self.api.generate_from_code(file_content, os.path.basename(file))
             if uml_content != "UML generation failed":
                 uml_contents.append(uml_content)
             else:

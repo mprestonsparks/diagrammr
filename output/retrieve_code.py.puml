@@ -1,206 +1,50 @@
-return True
+@startuml
+title retrieve_code.py
+# Get the latest commit from the repository
+        head_commit = repo.head.commit
+        # Convert the commit information to JSON format
+        commit_json = json.dumps({"message": head_commit.message,
+                                  "author": head_commit.author.name,
+                                  "date": str(head_commit.authored_datetime)})
+        logger.debug(f"Latest commit info: {commit_json}")
+
+        # Return the repository object and commit info
+        return repo, commit_json
+    except git.GitCommandError:
+        logger.error("Failed to clone repository. Please check the URL and try again.")
+        return None, None
     except Exception as e:
-        logger.error(f"Error cloning repository: {repo_url} - {e}")
-        return False
+        logger.error(f"An error occurred while cloning repository: {e}")
+        return None, None
 
 
-def retrieve_code(repo_url, temp_dir, access_token, dest_dir, branch='master'):
-    # Clone the repository to a temporary directory
-    cloned = clone_repo(repo_url, temp_dir, access_token)
-    
-    if cloned:
-        try:
-            repo = git.Repo(temp_dir)
-            # Checkout the specified branch
-            repo.git.checkout(branch)
-            # Copy the files to the destination directory
-            os.system(f'cp -r {temp_dir}/* {dest_dir}')
-            logger.info(f"Successfully retrieved code from {repo_url}")
-            return True
-        except Exception as e:
-            logger.error(f"Error retrieving code from {repo_url} - {e}")
-            return False
-
+# Class diagram
 
 @startuml
 
-class GitManager {
+class git
+class json
+class os
+class logging
+class handlers
+
+class repository {
     - repo_url : string
     - temp_dir : string
     - access_token : string
-    - dest_dir : string
-    - branch : string
-    + clone_repo(repo_url, temp_dir, access_token) : boolean
-    + retrieve_code(repo_url, temp_dir, access_token, dest_dir, branch='master') : boolean
+}
+class commit {
+    - message : string
+    - author : string
+    - date : string
 }
 
-note left of GitManager: Uses git\nlibrary
+logging -- handlers
+handlers -- logging
+handlers -- log_file
 
-class git.Repo {
-    + clone_from(repo_url, temp_dir) : git.Repo
-    + git : GitCommandType
-}
+repository -- logging
+repository -- git
+commit -- json
 
-class os {
-    + makedirs(directory, exist_ok=False) : None
-    + system(command) : int
-}
-
-GitManager .. git.Repo : uses
-GitManager .. os : uses
-
-@endumlif file.path.endswith('.py') and file.path not in ignore_list:  # Only include files that match the .py extension and are not in the ignore list
-                included_files[file.path] = file.data_stream.read().decode("utf-8")  # Store the file path as the key and the code as the value
-                
-        return included_files  # Return the dictionary of included files
-    except Exception as e:
-        logger.error(f"Failed to retrieve code: {str(e)}")
-        raise ValueError(f"Failed to retrieve code: {str(e)}")
-
-
-
-@startuml
-
-class Repo {
-    -path : str
-    -tree : list
-    -remote : str
-    -branches : list
-    +git : Repository
-    +clone() : Repository
-    +fetch() : Repository
-    +checkout(branch_name : str) : void
-    +tree() : list
-}
-
-class Logger {
-    +error(message : str) : void
-    +info(message : str) : void
-}
-
-class File {
-    -path : str
-    -data_stream : Stream
-    +read() : str
-}
-
-class Config {
-    -file_path : str
-    -ignore_list : list
-    -include_list : list
-    +load() : dict
-    +get_ignore_list() : list
-    +get_include_list() : list
-}
-
-class CodeRetriever {
-    -repo : Repo
-    -branch_name : str
-    +retrieve_code(repo : Repo, branch_name : str) : dict
-}
-
-CodeRetriever --> Repo : dependency
-CodeRetriever --> Logger : dependency
-CodeRetriever --> Config : dependency
-Repo --> File : contains
-Config --> File : contains
-
-code {
-
-CodeRetriever --> Logger : usage
-CodeRetriever --> Repo : method call
-Repo --> Logger : usage
-Repo --> Config : method call
-Repo --> File : method call
-Repo --> Stream : method call
-
-}
-
-exception {
-CodeRetriever --> ValueError : raise
-CodeRetriever --> Exception : catch
-Repo --> Exception : catch
-}
-
-
-@enduml@startuml
-class FileUtils{
-    -include_list: str[]
-    -ignore_list: str[]
-    -included_files: dict
-    -logger: Logger
-    
-    +__init__(include_list: str[], ignore_list: str[])
-    +retrieve_code(files: str[]): dict
-}
-
-class Logger{
-    +info(msg: str)
-    +warning(msg: str)
-    +error(msg: str)
-}
-
-class File{
-    -path: str
-    -abspath: str
-    
-    +endswith(ext: str)
-}
-
-File <|-- FileUtils
-Logger <|-- FileUtils
-
-note top: "Main control flow" as MainControlFlow
-MainControlFlow ..> FileUtils
-
-MainControlFlow --> if any(file.path.endswith(ext) for ext in include_list)
-MainControlFlow --> not any(ignored_file in file.path for ignored_file in ignore_list)
-
-if any(file.path.endswith(ext) for ext in include_list) ..> File
-not any(ignored_file in file.path for ignored_file in ignore_list) ..> File
-
-if any(file.path.endswith(ext) for ext in include_list) ==> open
-not any(ignored_file in file.path for ignored_file in ignore_list) ==> open
-
-open --> with open(file.abspath, 'r') as f
-open --> try..except
-
-with open(file.abspath, 'r') as f --> included_files[file.path] = f.read()
-try..except --> print
-try..except --> logger.warning
-try..except --> FileNotFoundError
-
-print --> "Diagnostic print statement"
-
-Logger <--: logger
-logger ..> MainControlFlow
-
-included_files[file.path] = f.read() ==> logger.info(f"Included file: {file.path}")
-
-FileNotFoundError ..> print
-FileNotFoundError ..> logger.warning
-
-Logger <--: logger
-logger ..> MainControlFlow
-
-print --> "Ignoring missing file: {file.path}"
-logger.warning(f"Ignoring missing file: {file.path}") ==> print
-
-MainControlFlow --> return included_files
-
-MainControlFlow --> Logger.error
-
-Logger ..> MainControlFlow
-
-note bottom: Catch all exceptions\nand raise ValueError as needed
-
-Logger.error ==> raise ValueError(f"Failed to retrieve code: {str(e)}")
-raise ValueError(f"Failed to retrieve code: {str(e)}") --> return included_files
-
-MainControlFlow ..> Logger
-Logger ..> raise: ValueError
-Logger ..> except: Exception
-
-note left: Calling code as follows:\ninclude_list = ['.py', '.txt']\nignore_list = ['tests', 'temp']\nfiles = ['test.py', 'index.txt', 'app.py', 'tests/utils.py', 'temp/index.txt']\n
-note left: Include list: ['.py', '.txt']\nIgnore list: ['tests', 'temp']\nFiles: ['test.py', 'index.txt', 'app.py', 'tests/utils.py', 'temp/index.txt']
 @enduml

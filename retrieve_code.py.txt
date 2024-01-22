@@ -1,0 +1,31 @@
+
+
+
+
+@startuml
+
+class CodeRetriever{
+    -include_list:String[]
+    -ignore_list:String[]
+    -included_files:Dictionary
+
+    +retrieveCode():Dict
+}
+
+
+class File{
+    -path:String
+    -abspath:String
+}
+
+class Logger{
+    -info(text:String):Void
+    -warning(text:String):Void
+    -error(text:String):Void
+}
+
+CodeRetriever -- File
+CodeRetriever o-- Logger
+
+
+@enduml

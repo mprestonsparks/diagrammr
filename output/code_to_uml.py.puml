@@ -1,61 +1,127 @@
-@startuml code_to_uml.py
+@startuml
+title code_to_uml.py
+if code == "":
+            continue
+        # Add file path to list
+        file_paths.append(file_path)
+        # Generate code from the OpenAI API
+        generated_code += api.generate(code)  # Concatenate the generated code
+    # Write the generated code to a file in the output directory
+    with open(os.path.join(output_directory, 'generated_code.py'), 'w+') as f:
+        f.write(generated_code)
+    return file_paths  # Return the list of processed file paths
 
-[*] --> code_to_uml.py
+````
 
-class code_to_uml.py {
-+ api: OpenAIAPI
-+ log_directory: String
-+ log_filename: String
-+ log_handler: RotatingFileHandler
-+ log_formatter: Formatter
-+ logger: logging
-+ generate_content(): void
-+ main(): void
-}
-
-code_to_uml.py --> OpenAIAPI
-code_to_uml.py --> logging
+@startuml
 
 class OpenAIAPI {
-+ generate(): String
-+ create_diagram(): void
+    # api_key: string
+    +generate(text: string): string
 }
 
-class logging {
-+ handlers: handlers
-+ formatter: Formatter
-logger: debug
-info
+class Logging {
+    -logger: Logger
+    -level: int
+    +Debug()
+    +Info()
+    +Warn()
+    +Error()
 }
 
-code_to_uml.py --> main.py
-code_to_uml.py --> helper.py
-
-class main.py {
+class Logger {
+    -log_handler: RotatingFileHandler
+    -log_formatter: Formatter
+    -log_filename: string
+    +setLevel(level: int)
+    +addHandler(handler: Handler)
+    +debug(msg: string)
+    +info(msg: string)
+    +warn(msg: string)
+    +error(msg: string)
 }
 
-class helper.py {
+class Handler {
+    #level: int
+    +setFormatter(formatter: Formatter)
+    +emit(record: LogRecord)
 }
 
-main.py --> generate_content()
-helper.py --> generate_content()
+class RotatingFileHandler {
+    -maxBytes: int
+    -backupCount: int
+    +doRollover()
+    +rotate(filename: string)
+}
 
-generate_content() --> logging
-logging --> log_directory
-logging --> log_filename
-logging --> log_handler
-logging --> log_formatter
-logging --> logger
-logger --> logging: debug, info
-logging --> file_paths
-logging --> generated_code
-generate_content() --> api: create_diagram()
-api --> generate()
-generate() --> api: generate()
-generate() --> code
-generate() --> output
-api --> create_diagram()
-create_diagram() --> generated_code
-create_diagram() --> output_directory
+class Formatter {
+    +format(record: LogRecord): string
+}
 
+class File {
+    -file_name: string
+    -content: string
+    +write(content: string)
+}
+
+class CodeToUML {
+    -api: OpenAIAPI
+    -file_paths: list
+    -generated_code: string
+    +generate_content(files: dict, output_directory: string): list
+}
+
+CodeToUML --> OpenAIAPI
+CodeToUML --> Logging
+Logging --> Logger
+Logger --> Handler
+Handler --> Formatter
+RotatingFileHandler <|-- Handler
+File <|-- CodeToUML
+
+@enduml_paths})
+    
+    @startuml
+
+    |     Main     |
+    |--------------|
+    | +code        |
+    |--------------|
+    | +not strip() |                  ------------
+    |    +logging.in "Skipping empty file:<$file_path$>" |    |<--        |
+    |              |                                         |           |
+    |              |                                         |<--        |
+    |              |                        True             |           |
+    |              |<----------------------------------------|           |
+    |              |                                False      |           |
+    |              |  -----                                     |           |
+    |              +-->|strip()|    --------                |           |
+    |                   ----------    |      |               |           |
+    |                        |        |      |  <--------   |           |
+    |                        |        |      |       True   |           |
+    |                        |        |      |   ------------           |
+    |             |<---------   -------------->|not generated_code
+    |logging.info|                             ----------------->|generated_code_for_file|   | generated_code
+    |        "Processing file:<$file_path$>"                         -------------------->|
+    |                                                                          |      |
+    |                                                                          |      |
+    |                                                                          |<-----
+    |                                                                ----------- |
+    |                                                          |     |<----
+    |                                       ------------       |     |
+    |                                       |    True  |       |     |
+    |                                       |----------->|not generated_code_for_file|
+    |                                       |<--------          |  or  |
+    |                                       |       False       |"UML generation failed" in generated_code_for_file
+    |                                       -----------       |   ------------
+    |                                                           |       |<-----
+    |                                                               |       |
+    |<-----                                                          |       |                                             
+    |               logging.error "Failed to generate UML diagram for:<$file_path$>" ---| 
+    |<-----           raise ValueError "Failed to generate UML diagram for:<$file_path$>" |
+    | generated_code += generated_code_for_file                                            |
+    |--------------------------------------------------------------------------------------|
+
+
+    @endumlUML diagrams cannot be created for code snippets as they do not contain enough information about the structure and relationships between classes and objects. UML diagrams are typically created to visualize the design and architecture of a software system, not individual functions or methods. It would therefore be more appropriate to create UML diagrams for the overall design and architecture of the software system in which this code snippet is a part of.
 @enduml
