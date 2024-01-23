@@ -1,9 +1,10 @@
-2024-01-22 21:32:54,555 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
-2024-01-22 21:32:54,556 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
-2024-01-22 21:32:54,564 - WARNING -  * Debugger is active!
-2024-01-22 21:32:54,571 - INFO -  * Debugger PIN: 139-904-016
-2024-01-22 21:32:55,635 - INFO -  * Detected change in '/Users/preston/Documents/gitRepos/diagrammr/src/app.py', reloading
-2024-01-22 21:32:55,962 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
-2024-01-22 21:32:55,963 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
-2024-01-22 21:32:55,971 - WARNING -  * Debugger is active!
-2024-01-22 21:32:55,977 - INFO -  * Debugger PIN: 139-904-016
+2024-01-22 21:48:40,086 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-22 21:48:40,087 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-22 21:48:40,097 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-22 21:48:40,097 - INFO - [33mPress CTRL+C to quit[0m
+2024-01-22 21:48:40,097 - INFO -  * Restarting with stat
+2024-01-22 21:48:40,355 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-01-22 21:48:40,356 - DEBUG - load_verify_locations cafile='/Users/preston/Documents/gitRepos/diagrammr/venv/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-01-22 21:48:40,364 - WARNING -  * Debugger is active!
+2024-01-22 21:48:40,369 - INFO -  * Debugger PIN: 139-904-016

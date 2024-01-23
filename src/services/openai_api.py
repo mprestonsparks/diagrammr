@@ -5,6 +5,7 @@ from logging import handlers
 from openai import OpenAI, OpenAIError
 from dotenv import load_dotenv
 from models.uml_diagram import UMLDiagram
+from models.git_repo import GitRepo  # Import GitRepo
 
 
 # Load environment variables from .env file
@@ -38,7 +39,12 @@ class OpenAIAPI:
         self.MAX_TOKENS = 1024
         self.OUTPUT_DIRECTORY = "src/output"
 
-    def generate_uml_diagram(self, code, title):
+    def generate_uml_diagram(self, repo_url, file_path, title):
+        # Clone the repository and retrieve the code
+        git_repo = GitRepo(repo_url)
+        git_repo.clone()
+        code = git_repo.retrieve_code(file_path)
+
         uml_diagram = UMLDiagram(code, title)
         uml_diagram.generate(self)
         return uml_diagram
