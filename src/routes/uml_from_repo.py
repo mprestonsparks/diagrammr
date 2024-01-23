@@ -11,7 +11,7 @@ from logging import handlers
 from services.retrieve_code import clone_repo, retrieve_code
 from utils.code_to_uml import generate_content  # Import the function from code_to_uml.py
 
-
+ 
 # Configure logging to write to a file
 log_directory = 'logs'
 # Create the directory if it doesn't exist
@@ -24,48 +24,46 @@ logger = logging.getLogger()
 logger.addHandler(log_handler)
 logger.setLevel(logging.DEBUG)
 
-def process_request(data):
-    git_repo_url = data.get('gitRepoUrl')
-    output_directory = data.get('local_dir')  # Get the output directory from the request data
-    github_access_token = data.get('gitHubAccessToken')
-    branch_name = data.get('branchName', 'master')  # 'master' is the default branch name
-    if not git_repo_url or not output_directory or not github_access_token or not branch_name:
-        logger.error("Missing required parameters")  
-        return {"error": "Missing required parameters"}, 400
+def process_request(git_repo, github_access_token):
+    output_directory = git_repo.local_dir  # Get the output directory from the GitRepo object
+    branch_name = 'master'  # 'master' is the default branch name
+    temp_dir = None  # Initialize temp_dir outside the try block
 
     try:
-        temp_dir = None
+        if not git_repo.repo_url or not output_directory or not github_access_token or not branch_name:
+            logger.error("Missing required parameters")  
+            return {"error": "Missing required parameters"}, 400
+
         try:
             temp_dir = tempfile.mkdtemp()
         except Exception as e:
             logger.error(f"Error during UML generation: {str(e)}", exc_info=True)
             return {"error": str(e)}, 500
-        finally:
-            # Clean up the temporary directory
-            if temp_dir is not None:
-                logger.info("Cleaning up temporary directory")
-                shutil.rmtree(temp_dir)
+
+        # Check if the directory exists and remove it
+        if os.path.exists(output_directory):
+            shutil.rmtree(output_directory)
 
         # Clone the repository
-        repo = clone_repo(git_repo_url, temp_dir, github_access_token)
-         
+        repo = git.Repo.clone_from(git_repo.repo_url, output_directory)
+
         # Load the config
         with open('src/routes/config.json', 'r') as f:
             config = json.load(f)
         
-        def traverse_directories(repo, temp_dir, config):
+        def traverse_directories(repo, git_repo, config):
             included_files = {}
             for item in repo.tree().traverse():
                 if item.type == 'blob':  # This means it's a file, not a directory
                     for pattern in config['include']:
                         if fnmatch.fnmatch(item.path, pattern):
-                            with open(os.path.join(temp_dir, item.path), 'r') as f:
+                            with open(os.path.join(git_repo.local_dir, item.path), 'r') as f:
                                 included_files[item.path] = f.read()
                             break  # No need to check the remaining patterns
             return included_files
 
         # Retrieve the code from the repository
-        included_files = traverse_directories(repo, temp_dir, config)
+        included_files = traverse_directories(repo, git_repo, config)
 
         logger.debug(f"Type of included_files: {type(included_files)}")
         logger.debug(f"Value of included_files: {included_files}")
@@ -81,7 +79,7 @@ def process_request(data):
         return {
             "message": "UML diagrams generated successfully",
             "details": {
-                "Repository": git_repo_url,
+                "Repository": git_repo.repo_url,
                 "Output Paths": final_output_paths  # This is now a list of file paths
             }
         }, 200
@@ -92,7 +90,6 @@ def process_request(data):
 
     finally:
         # Clean up the temporary directory
-        logger.info("Cleaning up temporary directory")
-        shutil.rmtree(temp_dir)
-
- 
+        if temp_dir is not None:
+            logger.info("Cleaning up temporary directory")
+            shutil.rmtree(temp_dir)

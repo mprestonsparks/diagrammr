@@ -44,9 +44,10 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-# Update the GitHub access token and local directory in the config data
+# Update the GitHub access token, local directory, and configFile in the config data
 config_data['gitHubAccessToken'] = github_token
 config_data['local_dir'] = os.path.join(current_dir, '../..', 'output')
+config_data['configFile'] = config_file_path  
 
 # Log the JSON data being sent in the request
 logging.info(f'Sending JSON data to {url}:')
