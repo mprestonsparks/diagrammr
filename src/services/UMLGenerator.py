@@ -25,7 +25,7 @@ class UMLGenerator:
             else:
                 logging.error(f"UML generation failed for file: {file}")
         return uml_contents
-
+ 
     def save_generated_outputs(self, uml_contents, file_names):
         for uml_content, file_name in zip(uml_contents, file_names):
             logging.info(f"Saving UML diagram for file: {file_name}")

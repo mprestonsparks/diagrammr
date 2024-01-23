@@ -4,6 +4,7 @@ import logging
 from logging import handlers
 from openai import OpenAI, OpenAIError
 from dotenv import load_dotenv
+from models.uml_diagram import UMLDiagram
 
 
 # Load environment variables from .env file
@@ -36,6 +37,14 @@ class OpenAIAPI:
         self.MODEL_NAME = "gpt-3.5-turbo-instruct"
         self.MAX_TOKENS = 1024
         self.OUTPUT_DIRECTORY = "src/output"
+
+    def generate_uml_diagram(self, code, title):
+        uml_diagram = UMLDiagram(code, title)
+        uml_diagram.generate(self)
+        return uml_diagram
+
+    def save_uml_diagram(self, uml_diagram, file_path):
+        uml_diagram.save(self, file_path)
 
     def write_response_to_file(self, response, filename):
         output_dir = "output/openai"
