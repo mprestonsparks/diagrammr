@@ -1,7 +1,7 @@
 import json
 import os
 import logging
-from openai_api import OpenAIAPI
+from services.openai_api import OpenAIAPI
 
 class UMLGenerator:
     def __init__(self, config_file):

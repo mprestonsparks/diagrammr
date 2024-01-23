@@ -38,14 +38,16 @@ class OpenAIAPI:
         self.OUTPUT_DIRECTORY = "src/output"
 
     def write_response_to_file(self, response, filename):
-        with open(f"{filename}.txt", 'w') as f:
+        output_dir = "output/openai"
+        os.makedirs(output_dir, exist_ok=True)  # Create the directory if it doesn't exist
+        with open(os.path.join(output_dir, f"{filename}.txt"), 'w') as f:
             f.write(response)
 
     def generate_from_code(self, code, title):
         # Split the code into chunks of MAX_TOKENS
         code_chunks = [code[i:i+self.MAX_TOKENS] for i in range(0, len(code), self.MAX_TOKENS)]
 
-        generated_code = ""
+        puml_chunks = []
         for chunk in code_chunks:
             prompt_text = f"Create UML diagrams in .puml format for the following code:\n\n{chunk}"
             logging.info(f"Sending prompt to OpenAI: {prompt_text}")  # Log the prompt text
@@ -62,10 +64,23 @@ class OpenAIAPI:
                 self.write_response_to_file(response.choices[0].text, title)
 
                 # Append the generated text to the UML code
-                generated_code += response.choices[0].text.strip()
+                puml_chunks.append(response.choices[0].text.strip())
             except OpenAIError as e:
                 logging.error(f"An error occurred while sending the prompt: {e}")  # Log the error message
                 return f"An error occurred: {e}"  # Return a message if an OpenAI API error occurs
+
+        # Combine the .puml chunks into a single string
+        combined_puml = "\n".join(puml_chunks)
+
+        # Send a final request to OpenAI to integrate the .puml chunks
+        prompt_text = f"Create a .puml file that integrates the following .puml files:\n\n{combined_puml}"
+        response = self.client.completions.create(
+            model=self.MODEL_NAME,
+            prompt=prompt_text,
+            max_tokens=self.MAX_TOKENS)
+
+        # Extract the integrated .puml code from the response
+        generated_code = response.choices[0].text.strip()
 
         # Add the @startuml, title and @enduml tags only once for each UML diagram
         generated_code = f"@startuml\n" + f"title {title}\n" + generated_code + "\n@enduml\n"

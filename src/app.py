@@ -1,7 +1,7 @@
 import os
 from flask import Flask, jsonify, request
 import tempfile
-from routes.retrieve_code import clone_repo, retrieve_code
+from services.retrieve_code import clone_repo, retrieve_code
 from routes.uml_from_repo import process_request  # Import the function from uml_from_repo.py
 import logging
 

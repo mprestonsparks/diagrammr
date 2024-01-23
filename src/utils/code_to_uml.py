@@ -1,6 +1,6 @@
 # code_to_uml.py
 import os
-from openai_api import OpenAIAPI 
+from services.openai_api import OpenAIAPI 
 import logging
 from logging import handlers  
 
