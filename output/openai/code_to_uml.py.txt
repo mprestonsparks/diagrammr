@@ -1,0 +1,62 @@
+
+
+@startuml
+title UML Code Extraction
+
+class _uml_code
++response : string
+-lines : string[]
+--------
+#split(response: string): string[]
+#findUmlCode(): void
+-extractCode(): string
+@enduml
+
+rectangle _uml_code {
+    +response
+    -lines
+    {method}+split(response)
+    {method}+findUmlCode()
+    -extractCode()
+}
+
+start
+:get response;
+activate _uml_code
+:split response into lines;
+if('|startuml|' not in response and '|enduml|' not in response)
+_activate logging
+:error "Failed to extract UML code...";
+return none;
+else
+:find start and end of UML code;
+:extract UML code;
+:return UML code;
+end
+
+_uml_code --> _uml_code : activate
+_logging --> _uml_code : activate
+_uml_code --> _uml_code : split
+_uml_code --> _uml_code : findUmlCode
+_uml_code --> _uml_code : extractCode
+note right of _uml_code
+    # split the response into lines
+    lines = response.split('\n')
+end note
+note right of _uml_code
+    if '@startuml' not in response or '@enduml' not in response:
+        logging.error("Failed to extract UML code from the response. '@startuml' or '@enduml' not found.")
+        return None
+end note
+note right of _uml_code
+    start_index = lines.index('@startuml')
+    end_index = lines.index('@enduml') if '@enduml' in lines else -1
+end note
+_uml_code --> _uml_code : return uml_code
+note right of _uml_code
+    # Extract the UML code
+    uml_code = '\n'.join(lines[start_index:end_index+1])
+end note
+_uml_code --> end
+
+@enduml

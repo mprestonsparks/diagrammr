@@ -55,7 +55,7 @@ class OpenAIAPI:
     def write_response_to_file(self, response, filename):
         output_dir = "output/openai"
         os.makedirs(output_dir, exist_ok=True)  # Create the directory if it doesn't exist
-        with open(os.path.join(output_dir, f"{filename}.txt"), 'w') as f:
+        with open(os.path.join(output_dir, f"{filename}.puml"), 'w') as f:
             f.write(response)
 
     def generate_from_code(self, code, title):

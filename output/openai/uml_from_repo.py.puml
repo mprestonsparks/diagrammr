@@ -1,0 +1,54 @@
+            
+####UML Diagram####
+```
+@startuml
+object UMLGenerator {
+    __init__(logger=None, config_path=None)
+    +finalize()
+    -search_git_repo_config(config_path)
+    -git_repo
+    #BASE_IMAGE_URL = "https://github.com/{git_username}/{repo_name}.git"
+
+    #temp_dir
+    +{ git_repo }
+    +{ logger }
+    +{ config_path }
+    +log_source_files()
+    +generate_uml()
+    +create_puml()
+    +search_for_github_repo()
+    +get_output_path()
+    +save_puml()
+    +return_results()
+}
+
+class git_repo {
+    repo_url
+}
+
+class logger {
+    log(message)
+    info(message)
+    error(message)
+}
+
+UMLGenerator --> git_repo
+UMLGenerator --> logger
+
+git_repo <-- UMLGenerator
+logger <-- UMLGenerator
+logger --> UMLGenerator.finalize()
+
+UMLGenerator : __init__(config_path)
+UMLGenerator : search_git_repo_config(config_path)
+UMLGenerator : __init__(logger)
+
+UMLGenerator : log_source_files()
+UMLGenerator : generate_uml()
+UMLGenerator : create_puml()
+UMLGenerator : search_for_github_repo()
+UMLGenerator : get_output_path()
+UMLGenerator : save_puml()
+UMLGenerator : return_results()
+
+@enduml

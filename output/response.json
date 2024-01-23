@@ -1,0 +1,19 @@
+[
+  {
+    "details": {
+      "Output Paths": [
+        "../../output/git_repo.py.puml",
+        "../../output/uml_diagram.py.puml",
+        "../../output/uml_from_repo.py.puml",
+        "../../output/execute_generate_uml.py.puml",
+        "../../output/UMLGenerator.py.puml",
+        "../../output/openai_api.py.puml",
+        "../../output/retrieve_code.py.puml",
+        "../../output/code_to_uml.py.puml"
+      ],
+      "Repository": "https://github.com/mprestonsparks/diagrammr.git"
+    },
+    "message": "UML diagrams generated successfully"
+  },
+  200
+]

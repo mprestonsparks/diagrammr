@@ -1,0 +1,27 @@
+
+
+@startuml
+class MainClass {
+- output_dir: Str
++ main()
+}
+
+MainClass --> File
+File --> OutputDir
+File -->+ write()
+OutputDir -> Output
+MainClass -> Logger
+Output --> Json
+Json --> Response
+Response -->+ parse()
+Logger -->+ info()
+Logger -->+ error()
+Response -->+ text()
+Output --> File
+MainClass -->+ createDir()
+OutputDir --> File
+File -->+ dump()
+Json -->+ dump()
+MainClass --> Exception
+
+@enduml

@@ -3,7 +3,7 @@ import os
 import logging
 from services.openai_api import OpenAIAPI
 
-class UMLGenerator:
+class DiagramGenerator:
     def __init__(self, config_file):
         self.api = OpenAIAPI()
         self.OUTPUT_DIRECTORY = "src/output" 

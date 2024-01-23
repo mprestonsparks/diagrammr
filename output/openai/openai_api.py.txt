@@ -1,0 +1,28 @@
+
+
+
+Activity Diagram:
+@startuml
+start
+:Create directory if it doesn't exist;
+if (Directory exists?) then (yes)
+    :Write UML code to file;
+else (no)
+    :Create directory;
+    :Write UML code to file;
+endif
+:Print path of file; 
+:Return file path;
+stop
+@enduml
+
+Class Diagram:
+@startuml
+class Ted_code {
+    - generated_code : String
+    - file_path : String
+    + save_generated_output(generated_code, file_path)
+}
+
+Ted_code "1" -- "1" FileIO
+@enduml

@@ -1,0 +1,46 @@
+# UML diagrams generating use as follows
+generate_uml(git_repo)
+
+@startuml
+
+class GitRepo {
+    {field} .repo_url
+}
+
+class GenerateUML {
+    {field} .repo = GitRepo
+    {field} .output_path
+    {field} .temp_dir
+
+    {method} + generate_uml(git_repo)
+    {method} - clean_up()
+}
+
+class Logger {
+    {method} + info(message)
+    {method} + error(message)
+}
+
+class shutil {
+    {method} + rmtree(path)
+}
+
+class tempfile {
+    {method} + NamedTemporaryFile(delete)
+}
+
+class Exception
+
+interface Flask {
+    {method} + route()
+}
+
+Note: Classes for "GitRepo", "Logger", "shutil", "tempfile", "Exception", and interface "Flask" are not shown here as they are predefined and do not require any additional fields or methods.
+
+Flask --> GenerateUML
+GenerateUML --> GitRepo
+GenerateUML --> Logger
+GenerateUML --> shutil
+GenerateUML --> tempfile
+GenerateUML --> Flask
+GenerateUML --> Exception

@@ -1,0 +1,37 @@
+
+
+@startuml
+
+class GitRepo {
+    - repo_url: String
+    - local_dir: String
+
+    + GitRepo(config_file)
+    + clone()
+    + retrieve_code(file_path)
+}
+
+GitRepo o-- git.Repo
+
+namespace os {
+    class path {
+        + exists(directory)
+    }
+    class shutil {
+        + rmtree(path)
+    }
+}
+
+namespace json {
+    class json {
+        + load(file)
+    }
+}
+
+namespace git {
+    class Repo {
+        + clone_from(url, path)
+    }
+}
+
+@enduml
