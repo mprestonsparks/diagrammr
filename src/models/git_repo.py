@@ -5,22 +5,30 @@ import shutil
 import os
 
 class GitRepo:
-    def __init__(self, config_file):
-        with open(config_file) as json_file:
-            data = json.load(json_file)
-        self.repo_url = data['gitRepoUrl']
-        self.local_dir = data['local_dir']
+    def __init__(self, config):
+        self.repo_url = config['gitRepoUrl']
+        self.config = config
 
-    def clone(self):
-        # Delete the directory if it exists and is not empty
-        if os.path.exists(self.local_dir) and os.listdir(self.local_dir):
-            shutil.rmtree(self.local_dir)
-        # Clone the repository and return the local path
-        # This is a simple example and doesn't handle errors
-        git.Repo.clone_from(self.repo_url, self.local_dir)
+    def clone_or_pull(self):
+        local_dir = self.config['local_dir']  # Retrieve local_dir from config when needed
+        if os.path.exists(local_dir) and os.path.isdir(local_dir):
+            try:
+                repo = git.Repo(local_dir)
+                origin = repo.remotes.origin
+                origin.pull()
+            except git.InvalidGitRepositoryError:
+                shutil.rmtree(local_dir)
+                git.Repo.clone_from(self.repo_url, local_dir)
+        else:
+            git.Repo.clone_from(self.repo_url, local_dir)
 
     def retrieve_code(self, file_path):
-        # Retrieve the code from a file in the repository
-        # This is a simple example and doesn't handle errors
-        with open(f'{self.local_dir}/{file_path}') as file:
-            return file.read()
+        local_dir = self.config['local_dir']  # Retrieve local_dir from config when needed
+        try:
+            full_file_path = os.path.join(local_dir, file_path)
+            with open(full_file_path, 'r') as file:
+                return file.read()
+        except FileNotFoundError:
+            raise Exception(f"The file {file_path} was not found in the repository.")
+        except Exception as e:
+            raise Exception(f"An error occurred while retrieving the code: {e}")

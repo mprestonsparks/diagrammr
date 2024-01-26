@@ -12,5 +12,7 @@
         "venv/",
         ".git/"
     ],
-    "include": ["src/**/*.py"]
+    "include": ["src/**/*.py"],
+    "local_dir": "../local_repo",
+    "outputDirectory": "../output"
 }

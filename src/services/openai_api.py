@@ -42,7 +42,7 @@ class OpenAIAPI:
     def generate_uml_diagram(self, repo_url, file_path, title):
         # Clone the repository and retrieve the code
         git_repo = GitRepo(repo_url)
-        git_repo.clone()
+        git_repo.clone_or_pull()
         code = git_repo.retrieve_code(file_path)
 
         uml_diagram = UMLDiagram(code, title)

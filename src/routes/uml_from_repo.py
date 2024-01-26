@@ -9,7 +9,9 @@ import shutil
 import logging
 from logging import handlers  
 from services.retrieve_code import clone_repo, retrieve_code
-from utils.code_to_uml import generate_content  # Import the function from code_to_uml.py
+from utils.code_to_uml import generate_content
+from services.etl_workflow import ETLWorkflow
+from services.openai_api import OpenAIAPI
 
  
 # Configure logging to write to a file
@@ -26,12 +28,12 @@ logger.setLevel(logging.DEBUG)
 
 def process_request(git_repo, github_access_token):
     output_directory = git_repo.local_dir  # Get the output directory from the GitRepo object
-    branch_name = 'master'  # 'master' is the default branch name
+    repo_url = git_repo.repo_url  # 'master' is the default branch name
     temp_dir = None  # Initialize temp_dir outside the try block
 
     try:
-        if not git_repo.repo_url or not output_directory or not github_access_token or not branch_name:
-            logger.error("Missing required parameters")  
+        if not repo_url or not output_directory or not github_access_token:
+            logger.error("Missing required parameters")
             return {"error": "Missing required parameters"}, 400
 
         try:
@@ -45,25 +47,27 @@ def process_request(git_repo, github_access_token):
             shutil.rmtree(output_directory)
 
         # Clone the repository
-        repo = git.Repo.clone_from(git_repo.repo_url, output_directory)
+        repo = git.Repo.clone_from(repo_url, output_directory)
 
         # Load the config
         with open('src/routes/config.json', 'r') as f:
             config = json.load(f)
         
-        def traverse_directories(repo, git_repo, config):
-            included_files = {}
-            for item in repo.tree().traverse():
-                if item.type == 'blob':  # This means it's a file, not a directory
-                    for pattern in config['include']:
-                        if fnmatch.fnmatch(item.path, pattern):
-                            with open(os.path.join(git_repo.local_dir, item.path), 'r') as f:
-                                included_files[item.path] = f.read()
-                            break  # No need to check the remaining patterns
-            return included_files
+        # Initialize OpenAIAPI and ETLWorkflow
+        openai_api = OpenAIAPI()  # Ensure OpenAIAPI is properly initialized
+        etl_workflow = ETLWorkflow(openai_api, 'src/routes/config.json')  # Pass the path to the config file
 
-        # Retrieve the code from the repository
-        included_files = traverse_directories(repo, git_repo, config)
+        # Retrieve the code from the repository and generate UML diagrams
+        included_files = {}
+        for item in repo.tree().traverse():
+            if item.type == 'blob':  # This means it's a file, not a directory
+                for pattern in config['include']:
+                    if fnmatch.fnmatch(item.path, pattern):
+                        file_path = os.path.join(output_directory, item.path)
+                        title = os.path.basename(item.path)  # Use the base name of the file as the title
+                        # Execute the ETL workflow for each file
+                        etl_workflow.execute(file_path, title)
+                        break  # No need to check the remaining patterns
 
         logger.debug(f"Type of included_files: {type(included_files)}")
         logger.debug(f"Value of included_files: {included_files}")
@@ -79,7 +83,7 @@ def process_request(git_repo, github_access_token):
         return {
             "message": "UML diagrams generated successfully",
             "details": {
-                "Repository": git_repo.repo_url,
+                "Repository": repo_url,
                 "Output Paths": final_output_paths  # This is now a list of file paths
             }
         }, 200
@@ -93,3 +97,4 @@ def process_request(git_repo, github_access_token):
         if temp_dir is not None:
             logger.info("Cleaning up temporary directory")
             shutil.rmtree(temp_dir)
+

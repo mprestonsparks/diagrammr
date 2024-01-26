@@ -1,8 +1,8 @@
 import os
 import shutil
 from flask import Flask, jsonify, request
-from routes.uml_from_repo import process_request  # Import the function from uml_from_repo.py
-from models.git_repo import GitRepo  # Import GitRepo
+from routes.uml_from_repo import process_request
+from models.git_repo import GitRepo
 import logging
  
 # Configure logging to a file
@@ -25,22 +25,19 @@ def log_data(data):
     app.logger.info(f"Received JSON data: {data}")
 
 def get_parameters(data):
-    config_file = data.get('configFile')
+    config = data.get('config')
     github_access_token = data.get('gitHubAccessToken')
-    app.logger.info(f"Received configFile: {config_file}")
+    app.logger.info(f"Received config: {config}")
     app.logger.info(f"Received gitHubAccessToken: {github_access_token}")
-    return config_file, github_access_token
+    return config, github_access_token
 
-def validate_parameters(config_file, github_access_token):
-    if not config_file or not github_access_token:
+def validate_parameters(config, github_access_token):
+    if not github_access_token or not config:
         return jsonify({"error": "Missing required parameters"}), 400
 
-def create_git_repo(config_file):
-    output_dir = "../../output"
-    if os.path.exists(output_dir):
-        shutil.rmtree(output_dir)
-    git_repo = GitRepo(config_file)  # Create a GitRepo object
-    git_repo.clone()  # Clone the repository
+def create_git_repo(config):
+    git_repo = GitRepo(config)  # Pass config as an argument
+    git_repo.clone_or_pull()  # Clone the repository
     return git_repo
 
 def process_and_respond(git_repo, github_access_token):
@@ -56,10 +53,15 @@ def generate_uml():
     data = request.json
     log_data(data)
 
-    config_file, github_access_token = get_parameters(data)
-    validate_parameters(config_file, github_access_token)
+    config, github_access_token = get_parameters(data)
+    if not config:
+        return jsonify({"error": "Missing 'config' parameter"}), 400
 
-    git_repo = create_git_repo(config_file)
+    validation_response = validate_parameters(config, github_access_token)
+    if validation_response:
+        return validation_response
+
+    git_repo = create_git_repo(config)  # Pass the config to the function
     return process_and_respond(git_repo, github_access_token)
 
 if __name__ == '__main__':
