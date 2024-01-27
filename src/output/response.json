@@ -1,3 +1,22 @@
 {
-  "error": "Missing 'config' parameter"
+  "details": {
+    "Output Paths": [
+      "../local_repo/__init__.py.puml",
+      "../local_repo/git_repo.py.puml",
+      "../local_repo/uml_diagram.py.puml",
+      "../local_repo/__init__.py.puml",
+      "../local_repo/uml_from_repo.py.puml",
+      "../local_repo/__init__.py.puml",
+      "../local_repo/execute_generate_uml.py.puml",
+      "../local_repo/__init__.py.puml",
+      "../local_repo/diagram_generator.py.puml",
+      "../local_repo/etl_workflow.py.puml",
+      "../local_repo/openai_api.py.puml",
+      "../local_repo/retrieve_code.py.puml",
+      "../local_repo/__init__.py.puml",
+      "../local_repo/code_to_uml.py.puml"
+    ],
+    "Repository": "https://github.com/mprestonsparks/diagrammr.git"
+  },
+  "message": "UML diagrams generated successfully"
 }

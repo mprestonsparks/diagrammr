@@ -27,8 +27,7 @@ def log_data(data):
 def get_parameters(data):
     config = data.get('config')
     github_access_token = data.get('gitHubAccessToken')
-    app.logger.info(f"Received config: {config}")
-    app.logger.info(f"Received gitHubAccessToken: {github_access_token}")
+    app.logger.info(f"get_parameters() received config")
     return config, github_access_token
 
 def validate_parameters(config, github_access_token):
@@ -42,10 +41,16 @@ def create_git_repo(config):
 
 def process_and_respond(git_repo, github_access_token):
     try:
-        response = process_request(git_repo, github_access_token)  # Call the process_request function with the GitRepo object
-        return jsonify(response), 200
+        # Log the types and contents of git_repo and github_access_token
+        app.logger.debug(f"Type of git_repo: {type(git_repo)}")
+        app.logger.debug(f"Contents of git_repo: {git_repo.__dict__}")  # Assuming git_repo is an object with properties
+        app.logger.debug(f"Type of github_access_token: {type(github_access_token)}")
+
+        response, status_code = process_request(git_repo, github_access_token)  # Unpack the tuple
+        return jsonify(response), status_code  # Return the JSON response and status code
     except Exception as e:
-        app.logger.error(f"Error: {str(e)}")
+        # Log the exception with traceback
+        app.logger.error(f"Error: {str(e)}", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
 @app.route('/generate-uml', methods=['POST'])

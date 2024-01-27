@@ -23,23 +23,28 @@ def generate_content(files, output_directory):
     logging.info(f"Files to process: {files}")  # Log the files dictionary
     file_paths = []  # Initialize a list to store the file paths
     for file_path, code in files.items():
-        # Skip if the file is empty
-        if not code.strip():
-            logging.info(f"Skipping empty file: {file_path}")
-            continue
-        logging.info(f"Processing file: {file_path}")
-        response = api.generate_from_code(code, os.path.basename(file_path))
-        # Extract the UML code from the response
-        generated_code_for_file = extract_uml_code(response)
-        if generated_code_for_file is None:
-            logging.error(f"Failed to generate UML diagram for {file_path}")
-            continue
-        logging.info(f"UML code generated for {file_path}: {generated_code_for_file}")  # Log the generated UML code
+        try:
+            # Skip if the file is empty
+            if not code.strip():
+                logging.info(f"Skipping empty file: {file_path}")
+                continue
+            logging.info(f"Processing file: {file_path}")
+            response = api.generate_from_code(code, os.path.basename(file_path))
+            logger.debug(f"Response from OpenAI for file {file_path}: {response}")
+            # Extract the UML code from the response
+            generated_code_for_file = extract_uml_code(response)
+            if generated_code_for_file is None:
+                logging.error(f"Failed to generate UML diagram for {file_path}")
+                continue
+            logging.info(f"UML code generated for {file_path}: {generated_code_for_file}")  # Log the generated UML code
 
-        # Save the UML code for each file to a separate .puml file
-        file_name = f"{os.path.basename(file_path)}.puml"
-        final_output_path = api.save_generated_output(generated_code_for_file, os.path.join(output_directory, file_name))
-        file_paths.append(final_output_path)  # Append the file path to the list
+            # Save the UML code for each file to a separate .puml file
+            file_name = f"{os.path.basename(file_path)}.puml"
+            final_output_path = api.save_generated_output(generated_code_for_file, os.path.join(output_directory, file_name))
+            file_paths.append(final_output_path)  # Append the file path to the list
+        except Exception as e:
+            logger.error(f"Error in generating content for file {file_path}: {str(e)}", exc_info=True)
+            continue
 
     logging.info(f"Generated file paths: {file_paths}")
     # Return the list of file paths

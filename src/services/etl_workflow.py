@@ -2,21 +2,35 @@ from services.openai_api import OpenAIAPI
 from models.git_repo import GitRepo
 import os
 import json
+import logging
+
+logger = logging.getLogger(__name__)
 
 class ETLWorkflow:
-    def __init__(self, openai_api, config):
+    def __init__(self, openai_api, git_repo_config):
+        # Ensure the local_repo directory exists
+        if not os.path.exists(git_repo_config['local_dir']):
+            os.makedirs(git_repo_config['local_dir'])
         self.openai_api = openai_api
-        self.git_repo = GitRepo(config)
+        self.git_repo = GitRepo(git_repo_config)
         self.git_repo.clone_or_pull()  # Clone the repository once during initialization
 
     def execute(self, file_path, title):
         # No need to clone for each file, as the repository is already cloned during initialization
         full_file_path = os.path.join(self.git_repo.local_dir, file_path)
-        raw_code = self.get_code_from_repo(full_file_path)
-        summary = self.get_summary_from_openai(raw_code)
-        cleaned_summary = self.clean_response(summary)
-        puml_code = self.get_puml_from_openai(cleaned_summary, title)
-        self.openai_api.save_generated_output(puml_code, full_file_path)
+        try:
+            raw_code = self.get_code_from_repo(full_file_path)
+            logger.debug(f"Retrieved code from {full_file_path}: {raw_code}")
+            summary = self.get_summary_from_openai(raw_code)
+            cleaned_summary = self.clean_response(summary)
+            logger.debug(f"Cleaned summary: {cleaned_summary}")
+            puml_code = self.get_puml_from_openai(cleaned_summary, title)
+            logger.debug(f"Generated PUML code: {puml_code}")
+            # Instead of saving the output here, return the generated PUML code
+            return puml_code
+        except Exception as e:
+            logger.error(f"Error in ETL workflow execution for file {file_path}: {str(e)}", exc_info=True)
+            raise
 
     def get_code_from_repo(self, full_file_path):
         # Assuming retrieve_code() now works with a path to the local file system

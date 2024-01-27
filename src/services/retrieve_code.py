@@ -31,12 +31,11 @@ def clone_repo(repo_url, temp_dir, access_token):
         logger.error(f"Failed to clone repository: {str(e)}")
         raise ValueError(f"Failed to clone repository: {str(e)}")
 
-def retrieve_code(repo, branch_name):
+def retrieve_code(git_repo, branch_name):
     try:
         print(f"Attempting to checkout branch: {branch_name}")  # Diagnostic print statement
         logger.info(f"Attempting to checkout branch: {branch_name}")
-        repo.git.fetch()  # Fetch the latest updates from the remote
-        repo.git.checkout(branch_name)
+        git_repo.clone_or_pull()  # Use the GitRepo method to ensure the repo is up to date
         logger.info(f"Successfully checked out branch: {branch_name}")
         
         # Load the config
@@ -48,7 +47,7 @@ def retrieve_code(repo, branch_name):
 
         # Create a new dictionary to store file paths and their corresponding code
         included_files = {}
-        for file in repo.tree():
+        for file in git_repo.tree():
             if any(file.path.endswith(ext) for ext in include_list) and not any(ignored_file in file.path for ignored_file in ignore_list):
                 try:
                     with open(file.abspath, 'r') as f:

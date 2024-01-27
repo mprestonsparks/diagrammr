@@ -65,7 +65,6 @@ class OpenAIAPI:
         puml_chunks = []
         for chunk in code_chunks:
             prompt_text = f"Create UML diagrams in .puml format for the following code:\n\n{chunk}"
-            logging.info(f"Sending prompt to OpenAI: {prompt_text}")  # Log the prompt text
             try:
                 response = self.client.completions.create(
                     model=self.MODEL_NAME,

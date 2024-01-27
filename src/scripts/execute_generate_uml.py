@@ -4,6 +4,7 @@ import requests
 import logging
 from logging import handlers
 from dotenv import load_dotenv
+from ..models.git_repo import GitRepo  # Import the GitRepo class
 
 # Load environment variables from .env file
 load_dotenv()
@@ -43,10 +44,17 @@ github_token = os.getenv('GITHUB_PAT')
 config_data['gitHubAccessToken'] = github_token
 config_data['gitRepoUrl'] = git_repo_data['gitRepoUrl']  # Add this line to include gitRepoUrl
 
+# Initialize GitRepo with the config_data
+git_repo = GitRepo(config_data)
+
+# Use the GitRepo instance to clone or pull the repository
+git_repo.clone_or_pull()
+
 # Define payload with the data to send
 payload = {
     'gitHubAccessToken': config_data['gitHubAccessToken'],
     'gitRepoUrl': config_data['gitRepoUrl'],
+    'config': config_data,  # Include the entire config_data as the 'config' parameter
     # Add other necessary data from config_data or as required by your application
 }
 
